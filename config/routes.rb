@@ -1,4 +1,6 @@
 WeatherRooster::Application.routes.draw do
+  get "home/thank_you"
+
   get "home/landing"
 
   # The priority is based upon order of creation:
