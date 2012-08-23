@@ -1,0 +1,27 @@
+%h1 Listing weather_services
+
+%table
+  %tr
+    %th Full name
+    %th Short name
+    %th Homepage url
+    %th Zipcode url template
+    %th Active
+    %th
+    %th
+    %th
+
+  - @weather_services.each do |weather_service|
+    %tr
+      %td= weather_service.full_name
+      %td= weather_service.short_name
+      %td= weather_service.homepage_url
+      %td= weather_service.zipcode_url_template
+      %td= weather_service.active
+      %td= link_to 'Show', weather_service
+      %td= link_to 'Edit', edit_weather_service_path(weather_service)
+      %td= link_to 'Destroy', weather_service, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Weather service', new_weather_service_path

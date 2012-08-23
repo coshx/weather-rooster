@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Full name:
+  = @weather_service.full_name
+%p
+  %b Short name:
+  = @weather_service.short_name
+%p
+  %b Homepage url:
+  = @weather_service.homepage_url
+%p
+  %b Zipcode url template:
+  = @weather_service.zipcode_url_template
+%p
+  %b Active:
+  = @weather_service.active
+
+= link_to 'Edit', edit_weather_service_path(@weather_service)
+\|
+= link_to 'Back', weather_services_path

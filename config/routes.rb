@@ -1,6 +1,10 @@
 WeatherRooster::Application.routes.draw do
 
 
+  resources :weather_records
+
+  resources :weather_services
+
   resources :users
 
   get "home/thank_you"

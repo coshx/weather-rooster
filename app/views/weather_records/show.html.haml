@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b High:
+  = @weather_record.high
+%p
+  %b Low:
+  = @weather_record.low
+%p
+  %b Weather date:
+  = @weather_record.weather_date
+%p
+  %b Chance of rain:
+  = @weather_record.chance_of_rain
+%p
+  %b Recorded at:
+  = @weather_record.recorded_at
+%p
+  %b Weather service:
+  = @weather_record.weather_service_id
+%p
+  %b User:
+  = @weather_record.user_id
+
+= link_to 'Edit', edit_weather_record_path(@weather_record)
+\|
+= link_to 'Back', weather_records_path
