@@ -46,4 +46,4 @@ end
 
 before 'deploy:finalize_update', 'deploy:set_current_release'
 before 'deploy:assets:precompile', 'deploy:symlink_shared'
-after :bundle_install, "deploy:migrate"
+after "bundle:install", "deploy:migrate"
