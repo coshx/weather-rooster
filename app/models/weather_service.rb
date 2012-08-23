@@ -2,7 +2,7 @@ class WeatherService < ActiveRecord::Base
   attr_accessible :active, :full_name, :homepage_url, :short_name, :zipcode_url_template
 
   def get_tomorrows_weather(zipcode)
-    if short_name = "Google"
+    if short_name == "Google"
       Barometer.config = { 1 => [:google] }
     elsif short_name == "Wunderground"
       Barometer.config = { 1 => [:wunderground] }
