@@ -8,3 +8,7 @@
     
     %input{:type => 'edit'}
     %a.large.button{:href => 'home/thank_you'} Subscribe
+    
+    .geolocation
+      =@geolocation.class
+      =@geolocation['country_name']
