@@ -1687,3 +1687,180 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:29:40 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `bunding' for #<HomeController:0x00000001eb2c00>):
+  app/controllers/home_controller.rb:5:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:29:44 -0700
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `bunding' for #<HomeController:0x000000024df150>):
+  app/controllers/home_controller.rb:5:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:29:52 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.4ms)
+  Rendered home/landing.html.haml within layouts/application (13.2ms)
+  Rendered meta/_google_analytics.html.erb (0.5ms)
+  Rendered meta/_facebook_meta.html.erb (0.4ms)
+Completed 200 OK in 302544ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/app.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /foundation/index.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:34:55 -0700
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:38:49 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `equest' for #<HomeController:0x00000004070248>):
+  app/controllers/home_controller.rb:5:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:38:51 -0700
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `equest' for #<HomeController:0x00000003aa2e38>):
+  app/controllers/home_controller.rb:5:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:39:30 -0700
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 2219ms
+
+RestClient::RequestTimeout (Request Timeout):
+  app/controllers/home_controller.rb:6:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:41:24 -0700
+Processing by HomeController#landing as HTML
+Completed   in 56046ms

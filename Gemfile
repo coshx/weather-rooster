@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem 'rb-readline'
+gem 'geo_ip'
+gem 'heroku'
 
 group :development do
   gem 'pry'
