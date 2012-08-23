@@ -2444,3 +2444,120 @@ Served asset /application.js - 304 Not Modified (28ms)
 
 Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:12 -0700
 Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:28:31 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.4ms)
+  Rendered home/landing.html.haml within layouts/application (239.7ms)
+Warning. Error encountered while saving cache /host/rails/weather-rooster/tmp/cache/sass/3b436f85eabf4056c8ebe472bbe95b01e2d4597a/_modular-scale.sassc: can't dump anonymous class #<Class:0x00000002f38f70>
+Compiled application.css  (3739ms)  (pid 4201)
+  Rendered meta/_google_analytics.html.erb (0.4ms)
+  Rendered meta/_facebook_meta.html.erb (0.4ms)
+Completed 200 OK in 4203ms (Views: 4202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /home.css - 304 Not Modified (84ms)
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /locations.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/app.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /foundation/index.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /locations.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 23:28:36 -0700
+Served asset /application.js - 304 Not Modified (28ms)
