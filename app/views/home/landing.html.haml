@@ -10,7 +10,7 @@
         #{closest_city.name}
         %ul
           -@cities.each do |c|
-            %li=c.name
+            %li=link_to c.name, "/city/" + slug(c.name)
             %li.divider
       .p{:style => 'margin-top:20px;'} WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
 
