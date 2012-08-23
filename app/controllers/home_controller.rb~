@@ -1,4 +1,11 @@
 class HomeController < ApplicationController
   def landing
   end
+  def thank_you
+  end
+  def main
+    puts request.remote_ip
+    
+    
+  end
 end

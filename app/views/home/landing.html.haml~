@@ -7,4 +7,4 @@
     %h2{:style => 'margin-bottom:100px'} We want to disrupt the weather :)
     
     %input{:type => 'edit'}
-    %a.large.button{:href => thank_you_path} Subscribe
+    %a.large.button{:href => 'home/thank_you'} Subscribe

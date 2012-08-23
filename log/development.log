@@ -787,3 +787,903 @@ Served asset /home.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 11:38:01 -0700
 Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/home/thank_you" for 127.0.0.1 at 2012-08-22 11:39:41 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#thank_you as HTML
+  Rendered home/thank_you.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 110ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /home.css - 304 Not Modified (70ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:42 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/app.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /foundation/index.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 11:39:43 -0700
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:15:33 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (2.5ms)
+Compiled jquery.js  (4ms)  (pid 22752)
+Compiled jquery_ujs.js  (0ms)  (pid 22752)
+Compiled foundation/modernizr.foundation.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.placeholder.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.alerts.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.accordion.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.buttons.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.tooltips.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.forms.js  (1ms)  (pid 22752)
+Compiled foundation/jquery.foundation.tabs.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.navigation.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.reveal.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.orbit.js  (0ms)  (pid 22752)
+Compiled foundation/jquery.foundation.mediaQueryToggle.js  (0ms)  (pid 22752)
+Compiled foundation/app.js  (0ms)  (pid 22752)
+Compiled foundation/index.js  (344ms)  (pid 22752)
+Compiled application.js  (594ms)  (pid 22752)
+Completed 500 Internal Server Error in 1025ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render 'meta/google_analytics'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_19696660'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:15:36 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render 'meta/google_analytics'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_19696660'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:15:37 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 385ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render 'meta/google_analytics'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_19696660'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (135.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:15:52 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render 'meta/google_analytics'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_19696660'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:16:41 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:html] instead. (called from _app_views_layouts_application_html_haml__4302154683745037425_69968239610880 at /host/rails/weather-rooster/app/views/layouts/application.html.haml:8)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render 'meta/google_analytics.html'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_69968239610880'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:16:52 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:html] instead. (called from _app_views_layouts_application_html_haml__4302154683745037425_69968138618940 at /host/rails/weather-rooster/app/views/layouts/application.html.haml:8)
+Completed 500 Internal Server Error in 568ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render :partial => 'meta/google_analytics.html'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_69968138618940'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (128.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:16:59 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.2ms)
+DEPRECATION WARNING: Passing a template handler in the template name is deprecated. You can simply remove the handler name or pass render :handlers => [:erb] instead. (called from _app_views_layouts_application_html_haml__4302154683745037425_69968140592020 at /host/rails/weather-rooster/app/views/layouts/application.html.haml:8)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (Missing partial meta/google_analytics.html with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render :partial => 'meta/google_analytics.html.erb'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_69968140592020'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:19:01 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.2ms)
+DEPRECATION WARNING: Passing a template handler in the template name is deprecated. You can simply remove the handler name or pass render :handlers => [:erb] instead. (called from _app_views_layouts_application_html_haml__4302154683745037425_69968140563100 at /host/rails/weather-rooster/app/views/layouts/application.html.haml:8)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (Missing partial ../meta/google_analytics.html with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/host/rails/weather-rooster/app/views"
+):
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render :partial => '../meta/google_analytics.html.erb'
+    9: %body
+    10:   = yield
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__4302154683745037425_69968140563100'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:20:34 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (0.1ms)
+  Rendered meta/_google_analytics.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /application.css - 200 OK (234ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /home.css - 200 OK (72ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /jquery.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/app.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/index.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (61ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:35 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:36 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:36 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:36 -0700
+Served asset /home.js - 200 OK (551ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:20:37 -0700
+Served asset /application.js - 200 OK (418ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.4ms)
+  Rendered home/landing.html.haml within layouts/application (5.1ms)
+  Rendered meta/_google_analytics.html.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:34 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.1ms)
+  Rendered home/landing.html.haml within layouts/application (2.1ms)
+  Rendered meta/_google_analytics.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /application.css - 304 Not Modified (77ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:21:36 -0700
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.0ms)
+  Rendered home/landing.html.haml within layouts/application (2.1ms)
+  Rendered meta/_google_analytics.html.erb (0.0ms)
+  Rendered meta/_facebook_meta.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:22:05 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:25:34 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.4ms)
+  Rendered home/landing.html.haml within layouts/application (8.3ms)
+Compiled scaffolds.css  (64ms)  (pid 22985)
+Compiled users.css  (2ms)  (pid 22985)
+Compiled application.css  (116ms)  (pid 22985)
+Compiled users.js  (95ms)  (pid 22985)
+Compiled application.js  (110ms)  (pid 22985)
+  Rendered meta/_google_analytics.html.erb (0.4ms)
+  Rendered meta/_facebook_meta.html.erb (0.3ms)
+Completed 200 OK in 477ms (Views: 476.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /users.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:35 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:36 -0700
+Served asset /foundation/index.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:36 -0700
+Served asset /foundation/app.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:36 -0700
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:36 -0700
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:36 -0700
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/home/main" for 127.0.0.1 at 2012-08-22 21:25:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home/main"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/mic/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/mic/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/mic/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 21:25:55 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.0ms)
+  Rendered home/landing.html.haml within layouts/application (2.2ms)
+  Rendered meta/_google_analytics.html.erb (0.1ms)
+  Rendered meta/_facebook_meta.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/app.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 21:25:56 -0700
+Served asset /application.js - 304 Not Modified (3ms)
