@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
   def find_closest_city
     cities = City.all
     
-    la1 = 32.7153292 #request.location.latitude
-    lo1 = -117.1572551 #request.location.longitude
+    la1 = request.location.latitude
+    lo1 = request.location.longitude
     
     smaller_distance = 1000000000.00000001
     city = cities.first    
