@@ -11,20 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120823052220) do
-
-  create_table "locations", :force => true do |t|
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120823172609) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "weather_records", :force => true do |t|
+    t.integer  "high"
+    t.integer  "low"
+    t.date     "weather_date"
+    t.integer  "chance_of_rain"
+    t.datetime "recorded_at"
+    t.integer  "weather_service_id"
+    t.integer  "user_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "weather_services", :force => true do |t|
+    t.string   "full_name"
+    t.string   "short_name"
+    t.string   "homepage_url"
+    t.string   "zipcode_url_template"
+    t.boolean  "active"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
 end

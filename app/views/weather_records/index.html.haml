@@ -1,0 +1,31 @@
+%h1 Listing weather_records
+
+%table
+  %tr
+    %th High
+    %th Low
+    %th Weather date
+    %th Chance of rain
+    %th Recorded at
+    %th Weather service
+    %th User
+    %th
+    %th
+    %th
+
+  - @weather_records.each do |weather_record|
+    %tr
+      %td= weather_record.high
+      %td= weather_record.low
+      %td= weather_record.weather_date
+      %td= weather_record.chance_of_rain
+      %td= weather_record.recorded_at
+      %td= weather_record.weather_service_id
+      %td= weather_record.user_id
+      %td= link_to 'Show', weather_record
+      %td= link_to 'Edit', edit_weather_record_path(weather_record)
+      %td= link_to 'Destroy', weather_record, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Weather record', new_weather_record_path
