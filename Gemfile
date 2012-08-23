@@ -8,9 +8,7 @@ gem 'rails', '3.2.8'
 gem 'geo_ip'
 gem 'heroku'
 
-group :production do
 gem 'pg'
-end
 
 group :development do
   gem 'pry'
