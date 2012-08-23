@@ -1,6 +1,7 @@
 .container
   .row
     %h1 Weather Rooster
+    %h1 Hey there in #{user_location.city}
     %h2{:style => 'margin-bottom:100px'}  The most accurate weather
     .p WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
     =render 'meta/facebook_likebox'
@@ -9,8 +10,4 @@
     %input{:type => 'edit'}
     %a.large.button{:href => 'home/thank_you'} Subscribe
     
-    .geolocation
-      =@geolocation.class
-      =@geolocation.country_name
-      %h3=@ip_address
-      
+    

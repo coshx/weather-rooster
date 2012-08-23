@@ -2160,3 +2160,287 @@ Timeout::Error (execution expired):
 
 Started GET "/" for 127.0.0.1 at 2012-08-22 22:00:37 -0700
 Processing by HomeController#landing as HTML
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (5.7ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (251.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (414.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120823042326)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (32.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120823042326')
+  [1m[36m (196.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLocations (20120823052220)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar(255), "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120823052220')
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("locations")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Completed   in 2207301ms
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 22:50:19 -0700
+Processing by HomeController#landing as HTML
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  Rendered meta/_facebook_likebox.html.erb (0.5ms)
+  Rendered home/landing.html.haml within layouts/application (83.5ms)
+Completed 500 Internal Server Error in 614ms
+
+ActionView::Template::Error (undefined method `nearbys' for nil:NilClass):
+    11:     
+    12:     .geolocation
+    13:       %ul
+    14:         -for location in @location.nearbys(10)
+    15:           %li
+    16:             =link_to location.address, location
+    17:             =location.distance.round(2)
+  app/views/home/landing.html.haml:14:in `_app_views_home_landing_html_haml___1769582863141575249_37262440'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:02:07 -0700
+Processing by HomeController#landing as HTML
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120823042326)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("locations")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Completed   in 725129ms
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:14:37 -0700
+Processing by HomeController#landing as HTML
+Completed 500 Internal Server Error in 238ms
+
+TypeError (can't convert String into Integer):
+  app/controllers/home_controller.rb:4:in `[]'
+  app/controllers/home_controller.rb:4:in `landing'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:14:59 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.4ms)
+  Rendered home/landing.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 49579ms
+
+ActionView::Template::Error (undefined method `nearbys' for nil:NilClass):
+    11:     
+    12:     .geolocation
+    13:       %ul
+    14:         -for location in @location.nearbys(10)
+    15:           %li
+    16:             =link_to location.address, location
+    17:             =location.distance.round(2)
+  app/views/home/landing.html.haml:14:in `_app_views_home_landing_html_haml___1916343283177443338_33232100'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:16:44 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined local variable or method `user_lcation' for #<#<Class:0x0000000465d430>:0x0000000465a898>):
+    1: .container
+    2:   .row
+    3:     %h1 Weather Rooster
+    4:     %h1 Hey there in #{user_lcation.city}
+    5:     %h2{:style => 'margin-bottom:100px'}  The most accurate weather
+    6:     .p WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
+    7:     =render 'meta/facebook_likebox'
+  app/views/home/landing.html.haml:4:in `_app_views_home_landing_html_haml___1916343283177443338_36900780'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:16:49 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined local variable or method `user_lcation' for #<#<Class:0x0000000465d430>:0x00000003fe8de8>):
+    1: .container
+    2:   .row
+    3:     %h1 Weather Rooster
+    4:     %h1 Hey there in #{user_lcation.city}
+    5:     %h2{:style => 'margin-bottom:100px'}  The most accurate weather
+    6:     .p WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
+    7:     =render 'meta/facebook_likebox'
+  app/views/home/landing.html.haml:4:in `_app_views_home_landing_html_haml___1916343283177443338_36900780'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:17:01 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.1ms)
+  Rendered home/landing.html.haml within layouts/application (127.4ms)
+Completed 500 Internal Server Error in 131ms
+
+ActionView::Template::Error (undefined method `nearbys' for nil:NilClass):
+    12:     
+    13:     .geolocation
+    14:       %ul
+    15:         -for location in @location.nearbys(10)
+    16:           %li
+    17:             =link_to location.address, location
+    18:             =location.distance.round(2)
+  app/views/home/landing.html.haml:15:in `_app_views_home_landing_html_haml___1916343283177443338_34779720'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-22 23:17:07 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.1ms)
+  Rendered home/landing.html.haml within layouts/application (169.7ms)
+Compiled locations.css  (49ms)  (pid 3702)
+Compiled application.css  (63ms)  (pid 3702)
+Compiled locations.js  (144ms)  (pid 3702)
+Compiled application.js  (511ms)  (pid 3702)
+  Rendered meta/_google_analytics.html.erb (0.4ms)
+  Rendered meta/_facebook_meta.html.erb (0.3ms)
+Completed 200 OK in 3180ms (Views: 3179.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (120ms)
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /locations.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /jquery.js - 304 Not Modified (152ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /users.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /locations.js - 200 OK (4ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/app.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:11 -0700
+Served asset /foundation/index.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:12 -0700
+Served asset /home.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:12 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:12 -0700
+Served asset /application.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-22 23:17:12 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (3ms)
