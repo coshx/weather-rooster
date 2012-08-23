@@ -11,6 +11,8 @@ gem 'heroku'
 gem 'pg'
 gem 'haml-rails'
 
+gem 'barometer'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
