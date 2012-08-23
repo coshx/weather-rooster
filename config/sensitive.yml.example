@@ -1,0 +1,9 @@
+weather:
+  partner: YOUR_PARTNER_KEY
+  license: YOUR_LICENSE_KEY
+
+weather_bug:
+  code: YOUR_API_CODE
+
+yahoo:
+  app_id: YOUR_APP_ID
