@@ -8,9 +8,9 @@ set :repository,  "git@github.com:coshx/weather-rooster.git"
 
 set :scm, :git
 
-role :web, "173.255.224.143"
-role :app, "173.255.224.143"
-role :db,  "173.255.224.143", :primary => true
+role :web, "weatherrooster.com"
+role :app, "weatherrooster.com"
+role :db,  "weatherrooster.com", :primary => true
 
 set :rvm_type, :system
 set :rvm_ruby_string, 'ruby-1.9.3@weather-rooster'
