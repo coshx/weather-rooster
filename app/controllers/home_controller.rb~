@@ -1,9 +1,5 @@
 class HomeController < ApplicationController
   def landing
-
-  puts user_location.class
-  binding.pry    
-    
   end
   def thank_you
   end

@@ -10,11 +10,4 @@
     %input{:type => 'edit'}
     %a.large.button{:href => 'home/thank_you'} Subscribe
     
-    .geolocation
-      %ul
-        -for location in @location.nearbys(10)
-          %li
-            =link_to location.address, location
-            =location.distance.round(2)
-            miles
-      
+    
