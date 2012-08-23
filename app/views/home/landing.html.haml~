@@ -9,5 +9,6 @@
     
     %input{:type => 'edit'}
     %a.large.button{:href => 'home/thank_you'} Subscribe
-    
+    -if request.location.city.present?
+      %h1=request.location.city
     

@@ -1,0 +1,23 @@
+%h1 Listing cities
+
+%table
+  %tr
+    %th Name
+    %th Latitude
+    %th Longitude
+    %th
+    %th
+    %th
+
+  - @cities.each do |city|
+    %tr
+      %td= city.name
+      %td= city.latitude
+      %td= city.longitude
+      %td= link_to 'Show', city
+      %td= link_to 'Edit', edit_city_path(city)
+      %td= link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New City', new_city_path
