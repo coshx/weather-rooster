@@ -11,3 +11,4 @@
     
     .geolocation
       =@geolocation.class
+      =@geolocation.country_name
