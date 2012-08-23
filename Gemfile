@@ -9,6 +9,7 @@ gem 'geo_ip'
 gem 'heroku'
 
 gem 'pg'
+gem 'haml-rails'
 
 group :development do
   gem 'pry'
@@ -31,7 +32,6 @@ group :assets do
   # Add these gems
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.9'
-  gem 'haml-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 
