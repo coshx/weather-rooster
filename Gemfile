@@ -16,6 +16,7 @@ gem 'barometer'
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
+  gem 'pry-rails', :group => :development
   gem 'rb-readline'
   gem 'rspec'
   gem 'hipchat'
