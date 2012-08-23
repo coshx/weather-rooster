@@ -8,12 +8,10 @@ gem 'rails', '3.2.8'
 gem 'geocoder'
 gem 'heroku'
 
-group :production do
 gem 'pg'
-end
+gem 'haml-rails'
 
 group :development do
-  gem 'sqlite3'
   gem 'pry'
   gem 'pry-nav'
   gem 'rb-readline'
@@ -34,7 +32,6 @@ group :assets do
   # Add these gems
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.9'
-  gem 'haml-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 

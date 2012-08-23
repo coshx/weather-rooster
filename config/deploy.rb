@@ -23,7 +23,7 @@ namespace :deploy do
 
   desc "Tell Passenger to restart the app"
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} /etc/init.d/weather-rooster upgrade;"
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
   task :set_current_release, :roles => :app do
