@@ -15,6 +15,7 @@ tmp
 log/*.log
 *.sw?
 *~
+public/assets
 
 # YARD artifacts
 .yardoc
