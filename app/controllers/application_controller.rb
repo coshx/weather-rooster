@@ -1,9 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :closest_city  
+  helper_method :closest_city, :request_city 
   
-
+  def request_city
+    
+    if params[:city].present?
+      city = Geocoder.search(params[:city])[0]
+    else
+      city = request.location
+    end
+    
+  end
+  
   def closest_city
     # if there's sity in the sesion, use it, otherwise find it through find_closest_city
     find_closest_city    
@@ -12,8 +21,9 @@ class ApplicationController < ActionController::Base
   def find_closest_city
     cities = City.all
     
-    la1 = request.location.latitude
-    lo1 = request.location.longitude
+      city = request_city
+      la1 = city.latitude
+      lo1 = city.longitude
     
     smaller_distance = 1000000000.00000001
     city = cities.first    

@@ -2,12 +2,22 @@
   .row
     %h1 Weather Rooster
     .panel
-      %h1 Hey there in ! Your closest city is #{closest_city.name}
-                                
-          
-    %h2{:style => 'margin-bottom:100px'}  The most accurate weather
-    .p WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
-    =render 'meta/facebook_likebox'
+      %h1 The most accurate weather
+  .row
+    .eight.columns    
+      %p Maybe you looking for <b>#{request_city.address}</b>, but the closest city to you that we support is:
+      .large.secondary.button.dropdown
+        #{closest_city.name}
+        %ul
+          -@cities.each do |c|
+            %li=c.name
+            %li.divider
+      .p{:style => 'margin-top:20px;'} WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
+
+    .four.columns      
+      =render 'meta/facebook_likebox'
+    
+  .row
     %h2{:style => 'margin-bottom:100px'} We want to disrupt the weather :)
     
     %input{:type => 'edit'}
