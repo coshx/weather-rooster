@@ -4,10 +4,13 @@ defaults: &defaults
   pool: 8
 
 development:
+  <<: *defaults
   database: weatherrooster_development
 
 test:
+  <<: *defaults
   database: weatherrooster_test
 
 production:
+  <<: *defaults
   database: weatherrooster_production
