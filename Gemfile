@@ -16,6 +16,7 @@ group :development, :test do
   gem 'pry-nav'
   gem 'rb-readline'
   gem 'rspec'
+  gem 'hipchat'
 end
 
 # deployment

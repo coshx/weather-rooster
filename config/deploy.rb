@@ -1,5 +1,6 @@
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 require 'bundler/capistrano'
+require 'hipchat/capistrano'
 
 load 'deploy/assets'
 
@@ -17,6 +18,10 @@ set :rvm_ruby_string, 'ruby-1.9.3@weather-rooster'
 
 set :rvm_bin_path, "/usr/local/rvm/bin"
 set :deploy_to, "/opt/#{application}"
+
+set :hipchat_token, "89d684618c0efae42e66b30900961c"
+set :hipchat_room_name, "Weather Rooster"
+set :hipchat_announce, true
 
 # deploy task for Passenger
 namespace :deploy do
