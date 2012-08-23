@@ -11,10 +11,11 @@ gem 'heroku'
 gem 'pg'
 gem 'haml-rails'
 
-group :development do
+group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rb-readline'
+  gem 'rspec'
 end
 
 # deployment
