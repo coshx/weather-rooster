@@ -2,8 +2,7 @@
   .row
     %h1 Weather Rooster
     .panel
-      -if request.location.city.present?
-        %h1 Hey there in ! Your closest city is #{closest_city.name}
+      %h1 Hey there in ! Your closest city is #{closest_city.name}
                                 
           
     %h2{:style => 'margin-bottom:100px'}  The most accurate weather
