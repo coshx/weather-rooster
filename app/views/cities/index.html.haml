@@ -14,6 +14,8 @@
       %td= city.name
       %td= city.latitude
       %td= city.longitude
+      %td= city.postal_code
+      %td= city.region_code
       %td= link_to 'Show', city
       %td= link_to 'Edit', edit_city_path(city)
       %td= link_to 'Destroy', city, :confirm => 'Are you sure?', :method => :delete

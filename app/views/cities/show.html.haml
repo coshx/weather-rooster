@@ -9,6 +9,13 @@
 %p
   %b Longitude:
   = @city.longitude
+%p
+  %b Postal code:
+  = @city.postal_code
+%p
+  %b Postal code:
+  = @city.region_code
+  
 
 = link_to 'Edit', edit_city_path(@city)
 \|
