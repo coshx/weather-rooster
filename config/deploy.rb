@@ -36,6 +36,13 @@ namespace :deploy do
   task :set_current_release, :roles => :app do
     set :current_release, latest_release
   end
+
+  desc "Symlink shared config on each release."
+  task :symlink_shared do
+    run "ln -nfs #{shared_path}/config/sensitive.yml #{release_path}/config/sensitive.yml"
+  end
+
 end
 
 before 'deploy:finalize_update', 'deploy:set_current_release'
+before 'deploy:assets:precompile', 'deploy:symlink_shared'

@@ -1,3 +1,6 @@
+# NOTE: we're not using these guys right now
+# cause I couldn't get htem to work
+
 weather:
   partner: YOUR_PARTNER_KEY
   license: YOUR_LICENSE_KEY
@@ -7,3 +10,8 @@ weather_bug:
 
 yahoo:
   app_id: YOUR_APP_ID
+
+# This one is rather important
+
+noaa:
+  token: YOUR_API_TOKEN
