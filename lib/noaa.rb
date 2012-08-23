@@ -17,6 +17,16 @@ class NOAA
     {:low => min_f, :high => max_f, :fetched_at => Time.current, :date => Date.parse(max["dataCollection"]["data"]["date"])}
   end
 
+  def self.get_date_of_most_recent_data(station_id)
+    data = self.get_station_data(station_id)
+    Date.parse(data["stationCollection"]["station"][0]["maxDate"])
+  end
+
+  def self.get_station_data(station_id)
+    options = {:token => @@token}
+    self.get "/GHCND:#{station_id}", :query => options
+  end
+
   private
   def self.c_to_f(val)
     val * 9 / 5 + 32
