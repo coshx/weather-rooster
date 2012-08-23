@@ -23,6 +23,8 @@ set :hipchat_token, "89d684618c0efae42e66b30900961c"
 set :hipchat_room_name, "Weather Rooster"
 set :hipchat_announce, true
 
+set :branch, "master"
+
 # deploy task for Passenger
 namespace :deploy do
 
