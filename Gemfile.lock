@@ -200,4 +200,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   therubyracer (= 0.11.0beta5)
   uglifier (>= 1.0.3)
-  zurb-foundation (~> 3.0.1)
+  zurb-foundation (~> 3.0.8)
