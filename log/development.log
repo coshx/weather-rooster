@@ -2789,3 +2789,182 @@ Served asset /home.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-23 00:01:15 -0700
 Served asset /application.js - 304 Not Modified (31ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-23 10:12:33 -0700
+Processing by HomeController#landing as HTML
+  Rendered home/landing.html.haml within layouts/application (9391.0ms)
+Completed 500 Internal Server Error in 9793ms
+
+ActionView::Template::Error (undefined method `city' for nil:NilClass):
+    1: .container
+    2:   .row
+    3:     %h1 Weather Rooster
+    4:     %h1 Hey there in #{user_location.city}
+    5:     %h2{:style => 'margin-bottom:100px'}  The most accurate weather
+    6:     .p WeatherRooster ranks different sources of local weather by their accuracy over time, so that people know which weather forecast they should trust. Also, individuals and TV stations can sign up to offer their predictions and compete with each other to be the most accurate.
+    7:     =render 'meta/facebook_likebox'
+  app/views/home/landing.html.haml:4:in `_app_views_home_landing_html_haml___2262998550819709638_34153360'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-23 10:12:54 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.9ms)
+  Rendered home/landing.html.haml within layouts/application (283.8ms)
+Completed 500 Internal Server Error in 570ms
+
+ActionView::Template::Error (couldn't find file 'vendor'
+  (in /host/rails/weather-rooster/app/assets/stylesheets/application.scss:12)):
+    2: %html
+    3: %head
+    4:   %title WeatherRooster
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render :partial => 'meta/google_analytics'
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___392333549403830018_34440960'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-23 10:12:58 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.1ms)
+  Rendered home/landing.html.haml within layouts/application (129.6ms)
+Completed 500 Internal Server Error in 183ms
+
+ActionView::Template::Error (couldn't find file 'vendor'
+  (in /host/rails/weather-rooster/app/assets/stylesheets/application.scss:12)):
+    2: %html
+    3: %head
+    4:   %title WeatherRooster
+    5:   = stylesheet_link_tag    "application", :media => "all"
+    6:   = javascript_include_tag "application"
+    7:   = csrf_meta_tags
+    8:   = render :partial => 'meta/google_analytics'
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___392333549403830018_34440960'
+
+
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/mic/.rvm/gems/ruby-1.9.3-p194@weather-rooster/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-23 10:13:28 -0700
+Processing by HomeController#landing as HTML
+  Rendered meta/_facebook_likebox.html.erb (0.1ms)
+  Rendered home/landing.html.haml within layouts/application (626.6ms)
+Warning. Error encountered while saving cache /host/rails/weather-rooster/tmp/cache/sass/3b436f85eabf4056c8ebe472bbe95b01e2d4597a/_modular-scale.sassc: can't dump anonymous class #<Class:0x0000000429b630>
+Compiled application.css  (1886ms)  (pid 6682)
+  Rendered meta/_google_analytics.html.erb (0.5ms)
+  Rendered meta/_facebook_meta.html.erb (0.3ms)
+Completed 200 OK in 3088ms (Views: 3087.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /home.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/locations.css?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /locations.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/modernizr.foundation.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/modernizr.foundation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.placeholder.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.accordion.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.accordion.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tooltips.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.tooltips.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.alerts.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.alerts.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.buttons.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.buttons.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.forms.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.forms.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.tabs.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.tabs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.reveal.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.reveal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.navigation.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.navigation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.orbit.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.orbit.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/foundation/jquery.foundation.mediaQueryToggle.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/jquery.foundation.mediaQueryToggle.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/app.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/app.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /foundation/index.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/locations.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /locations.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-23 10:13:31 -0700
+Served asset /application.js - 304 Not Modified (31ms)
