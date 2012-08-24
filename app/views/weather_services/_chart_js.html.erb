@@ -1,6 +1,10 @@
+
 <script type="text/javascript">
   $(document).ready(function() {
-    var settings = { type: "line", width: 800, height: 100};
+    w = $(".main").width();
+    var settings = { type: "line", width: w, height: 100};
     $("table.<%= chart_class %>.graph").visualize(settings);
   });
 </script>
+
+<p class=chart-description>Chart Description</p>

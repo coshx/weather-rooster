@@ -20,12 +20,14 @@ body {
   margin-left:63px;
 }
 
+
+.container {
+padding:15px;
+}
+
 @media only screen and (max-width:767px) {
 .left_space {
   margin-left:0px;
-}
-.container {
-padding:15px;
 }
 .main-table {
 margin:auto;

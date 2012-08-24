@@ -13,9 +13,19 @@ class ApplicationController < ActionController::Base
     
     if params[:city].present?
       city = Geocoder.search(params[:city])[0]
+      cookies[:city] = params[:city]
     else
-      city = request.location
+      
+      if cookies[:city].present?
+        city = Geocoder.search(cookies[:city])[0]
+      else
+        city = request.location
+      end
+      
     end
+    
+    
+    city
     
   end
   

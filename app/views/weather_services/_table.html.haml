@@ -16,3 +16,6 @@
   $(document).ready(function() {
     $(".sparkline").sparkline();
   });
+  
+.view-city-details
+  =link_to "View the details for #{@my_city.name} »", "/city/#{slug(@my_city.name)}/details"

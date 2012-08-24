@@ -18,7 +18,10 @@ WeatherRooster::Application.routes.draw do
   get "home/landing"
   get "home/main"
   get "about" => "home#about"
-  get "analytics" => "home#analytics"
+  get "contact" => "home#contact"
+  get "city_details" => "home#city_details"
+  get "city/:city/details" => "home#city_details"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
