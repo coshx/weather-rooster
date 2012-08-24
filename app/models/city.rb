@@ -14,8 +14,4 @@ reverse_geocoded_by :latitude, :longitude do |obj,results|
   end
 end
 
-
-
-  
-  
 end
