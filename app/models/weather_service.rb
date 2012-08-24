@@ -29,7 +29,7 @@ class WeatherService < ActiveRecord::Base
     weather.forecast.slice(0..5).each_with_index do |f, i|
       p["day_#{i}_high"] = f.high.to_i
       p["day_#{i}_low"] = f.low.to_i
-      if f.respond_to?(:icon)
+      if f.icon.present?
         p["day_#{i}_string"] = f.icon
       else
         p["day_#{i}_string"] = f.condition

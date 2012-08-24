@@ -6,6 +6,7 @@ class City < ActiveRecord::Base
   after_validation :geocode, :reverse_geocode, :if => :name_changed?
 
   has_many :weather_records
+  has_many :current_forecasts
 
 reverse_geocoded_by :latitude, :longitude do |obj,results|
   if geo = results.first
