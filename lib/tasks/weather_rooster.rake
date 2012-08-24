@@ -16,37 +16,21 @@ namespace :weather_rooster do
 
   desc "Pull next-day forecasts for eastern locations"
   task :pull_tomorrow_eastern => :environment do
-    WeatherService.all.each do |service|
-      City.find_all_by_timezone("Eastern Time (US & Canada)").each do |city|
-        service.get_tomorrows_weather(city)
-      end
-    end
+    WeatherService.pull_all_tomorrow("Eastern Time (US & Canada)")
   end
 
   desc "Pull next-day forecasts for central locations"
   task :pull_tomorrow_central => :environment do
-    WeatherService.all.each do |service|
-      City.find_all_by_timezone("Central Time (US & Canada)").each do |city|
-        service.get_tomorrows_weather(city)
-      end
-    end
+    WeatherService.pull_all_tomorrow("Central Time (US & Canada)")
   end
 
   desc "Pull next-day forecasts for mountain locations"
   task :pull_tomorrow_mountain => :environment do
-    WeatherService.all.each do |service|
-      City.find_all_by_timezone("Mountain Time (US & Canada)").each do |city|
-        service.get_tomorrows_weather(city)
-      end
-    end
+    WeatherService.pull_all_tomorrow("Mountain Time (US & Canada)")
   end
 
   desc "Pull next-day forecasts for pacific locations"
   task :pull_tomorrow_pacific => :environment do
-    WeatherService.all.each do |service|
-      City.find_all_by_timezone("America/Los_Angeles").each do |city|
-        service.get_tomorrows_weather(city)
-      end
-    end
+    WeatherService.pull_all_tomorrow("America/Los_Angeles")
   end
 end
