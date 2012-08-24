@@ -1,0 +1,21 @@
+
+
+.a-button {
+  background: #2BA6CB;
+  color:white;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+  padding:15px;
+  border-radius:5px;
+  cursor:pointer;  
+  display:inline-block;
+
+  &:hover {
+    background: #0B86AB;
+    color:white;
+  }
+  
+  -webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
+}

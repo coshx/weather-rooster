@@ -2,9 +2,12 @@
   %thead
     %tr
       %th Ranking
-      %th Accuracy (?)
+      %th Accuracy #{"<a href='#accuracy_detail' data-reveal-id='accuracy'>(?)</a>".html_safe}
   %tbody
     - @services.each do |s|
       %tr
         %td= s[:service].full_name
         %td #{s[:score]}%
+        
+
+
