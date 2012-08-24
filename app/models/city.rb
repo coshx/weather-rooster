@@ -5,6 +5,7 @@ class City < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude
   after_validation :geocode, :reverse_geocode, :if => :name_changed?
 
+  has_many :weather_records
 
 reverse_geocoded_by :latitude, :longitude do |obj,results|
   if geo = results.first
