@@ -6,9 +6,9 @@ class WeatherService < ActiveRecord::Base
   has_many :weather_records
   has_many :current_forecasts
 
-  def get_tomorrows_weather(zipcode)
+  def get_tomorrows_weather(city)
     config_barometer
-    barometer = Barometer.new(zipcode.to_s)
+    barometer = Barometer.new(city.postal_code)
     weather = barometer.measure
     {:low => weather.forecast[1].low.to_i, :high => weather.forecast[1].high.to_i, :date => weather.forecast[1].date, :fetched_at => Time.current}
 
