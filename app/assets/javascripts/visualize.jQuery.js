@@ -94,7 +94,7 @@ $.fn.visualize = function(options, container){
 						return topValue;
 				},
 				bottomValue: function(){
-						var bottomValue = 0;
+						var bottomValue = 1000;
 						var allData = this.allData().join(',').split(',');
 						$(allData).each(function(){
 							if(this<bottomValue) bottomValue = parseFloat(this);
