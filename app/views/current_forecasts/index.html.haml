@@ -1,0 +1,59 @@
+%h1 Listing current_forecasts
+
+%table
+  %tr
+    %th Weather service
+    %th City
+    %th Current temp
+    %th Day 0 high
+    %th Day 0 low
+    %th Day 0 string
+    %th Day 1 high
+    %th Day 1 low
+    %th Day 1 string
+    %th Day 2 high
+    %th Day 2 low
+    %th Day 2 string
+    %th Day 3 high
+    %th Day 3 low
+    %th Day 3 string
+    %th Day 4 high
+    %th Day 4 low
+    %th Day 4 string
+    %th Day 5 high
+    %th Day 5 low
+    %th Day 5 string
+    %th
+    %th
+    %th
+
+  - @current_forecasts.each do |current_forecast|
+    %tr
+      %td= current_forecast.weather_service_id
+      %td= current_forecast.city_id
+      %td= current_forecast.current_temp
+      %td= current_forecast.day_0_high
+      %td= current_forecast.day_0_low
+      %td= current_forecast.day_0_string
+      %td= current_forecast.day_1_high
+      %td= current_forecast.day_1_low
+      %td= current_forecast.day_1_string
+      %td= current_forecast.day_2_high
+      %td= current_forecast.day_2_low
+      %td= current_forecast.day_2_string
+      %td= current_forecast.day_3_high
+      %td= current_forecast.day_3_low
+      %td= current_forecast.day_3_string
+      %td= current_forecast.day_4_high
+      %td= current_forecast.day_4_low
+      %td= current_forecast.day_4_string
+      %td= current_forecast.day_5_high
+      %td= current_forecast.day_5_low
+      %td= current_forecast.day_5_string
+      %td= link_to 'Show', current_forecast
+      %td= link_to 'Edit', edit_current_forecast_path(current_forecast)
+      %td= link_to 'Destroy', current_forecast, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Current forecast', new_current_forecast_path

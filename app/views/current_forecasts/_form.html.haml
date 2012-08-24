@@ -1,0 +1,73 @@
+= form_for @current_forecast do |f|
+  -if @current_forecast.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@current_forecast.errors.count, "error")} prohibited this current_forecast from being saved:"
+      %ul
+        - @current_forecast.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :weather_service_id
+    = f.number_field :weather_service_id
+  .field
+    = f.label :city_id
+    = f.number_field :city_id
+  .field
+    = f.label :current_temp
+    = f.number_field :current_temp
+  .field
+    = f.label :day_0_high
+    = f.number_field :day_0_high
+  .field
+    = f.label :day_0_low
+    = f.number_field :day_0_low
+  .field
+    = f.label :day_0_string
+    = f.text_field :day_0_string
+  .field
+    = f.label :day_1_high
+    = f.number_field :day_1_high
+  .field
+    = f.label :day_1_low
+    = f.number_field :day_1_low
+  .field
+    = f.label :day_1_string
+    = f.text_field :day_1_string
+  .field
+    = f.label :day_2_high
+    = f.number_field :day_2_high
+  .field
+    = f.label :day_2_low
+    = f.number_field :day_2_low
+  .field
+    = f.label :day_2_string
+    = f.text_field :day_2_string
+  .field
+    = f.label :day_3_high
+    = f.number_field :day_3_high
+  .field
+    = f.label :day_3_low
+    = f.number_field :day_3_low
+  .field
+    = f.label :day_3_string
+    = f.text_field :day_3_string
+  .field
+    = f.label :day_4_high
+    = f.number_field :day_4_high
+  .field
+    = f.label :day_4_low
+    = f.number_field :day_4_low
+  .field
+    = f.label :day_4_string
+    = f.text_field :day_4_string
+  .field
+    = f.label :day_5_high
+    = f.number_field :day_5_high
+  .field
+    = f.label :day_5_low
+    = f.number_field :day_5_low
+  .field
+    = f.label :day_5_string
+    = f.text_field :day_5_string
+  .actions
+    = f.submit 'Save'

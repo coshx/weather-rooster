@@ -1,0 +1,69 @@
+%p#notice= notice
+
+%p
+  %b Weather service:
+  = @current_forecast.weather_service_id
+%p
+  %b City:
+  = @current_forecast.city_id
+%p
+  %b Current temp:
+  = @current_forecast.current_temp
+%p
+  %b Day 0 high:
+  = @current_forecast.day_0_high
+%p
+  %b Day 0 low:
+  = @current_forecast.day_0_low
+%p
+  %b Day 0 string:
+  = @current_forecast.day_0_string
+%p
+  %b Day 1 high:
+  = @current_forecast.day_1_high
+%p
+  %b Day 1 low:
+  = @current_forecast.day_1_low
+%p
+  %b Day 1 string:
+  = @current_forecast.day_1_string
+%p
+  %b Day 2 high:
+  = @current_forecast.day_2_high
+%p
+  %b Day 2 low:
+  = @current_forecast.day_2_low
+%p
+  %b Day 2 string:
+  = @current_forecast.day_2_string
+%p
+  %b Day 3 high:
+  = @current_forecast.day_3_high
+%p
+  %b Day 3 low:
+  = @current_forecast.day_3_low
+%p
+  %b Day 3 string:
+  = @current_forecast.day_3_string
+%p
+  %b Day 4 high:
+  = @current_forecast.day_4_high
+%p
+  %b Day 4 low:
+  = @current_forecast.day_4_low
+%p
+  %b Day 4 string:
+  = @current_forecast.day_4_string
+%p
+  %b Day 5 high:
+  = @current_forecast.day_5_high
+%p
+  %b Day 5 low:
+  = @current_forecast.day_5_low
+%p
+  %b Day 5 string:
+  = @current_forecast.day_5_string
+
+= link_to 'Edit', edit_current_forecast_path(@current_forecast)
+\|
+= link_to 'Back', current_forecasts_path
