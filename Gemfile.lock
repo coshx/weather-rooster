@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/indirect/jquery-rails
+  revision: c1eb6aeeb213202eadff373067db6f4c3e7581f3
+  specs:
+    jquery-rails (2.0.2)
+      railties (>= 3.2.0, < 5.0)
+      thor (~> 0.14)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,9 +97,6 @@ GEM
       multi_xml
     i18n (0.6.0)
     journey (1.0.4)
-    jquery-rails (2.1.1)
-      railties (>= 3.1.0, < 5.0)
-      thor (~> 0.14)
     json (1.7.5)
     launchy (2.1.2)
       addressable (~> 2.3)
@@ -212,7 +217,7 @@ DEPENDENCIES
   haml-rails
   heroku
   hipchat
-  jquery-rails
+  jquery-rails!
   pg
   pry
   pry-nav

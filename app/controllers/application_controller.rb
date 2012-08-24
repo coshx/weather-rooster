@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   
   def translate_status(api_name)
     status = WeatherStatus.find_by_api_name(api_name)
-    return status.name
+    status.present? ? status.name : "?"
   end
   
   def request_city
