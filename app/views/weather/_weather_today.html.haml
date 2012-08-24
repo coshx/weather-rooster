@@ -4,10 +4,11 @@
     %span.weather-now
       #{@current_temp}°#{"<span class=measuring>F</span>".html_safe}
   .six.columns
-    The most accurate weather today brought to you today 
-    =link_to @provider_name, "#"
-    %br
-    Accuracy of #{@services.first[:score]} %
-    %br
-    %br
-    Today's high: #{@day[0][:high]}° Low:#{@day[0][:high]}°
+    .weather-description
+      The most accurate weather brought to you today by
+      =link_to @provider_name, "#"
+      %br
+      %br
+      Accuracy of #{@services.first[:score]} %
+      %br
+      Today's high: #{@day[0][:high]}° Low:#{@day[0][:high]}°
