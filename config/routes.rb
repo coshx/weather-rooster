@@ -10,7 +10,7 @@ WeatherRooster::Application.routes.draw do
   resources :users
 
   get "home/thank_you"
-  get 'city/:city' => 'home#landing'
+  get 'city/:city' => 'home#main'
   get "home/landing"
   get "home/main"
 
