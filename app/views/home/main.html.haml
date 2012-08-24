@@ -10,9 +10,5 @@
   %p Accuracy is measured based on data for 30 days for specific region you are located in
   %a.close-reveal-modal &#215;
 
-.row
-  - @services.each do |s|
-    .row
-      = render :partial => 'weather_services/chart', :locals => {:weather_service => s[:service], :city => @my_city}
 
 
