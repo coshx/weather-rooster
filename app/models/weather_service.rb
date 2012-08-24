@@ -52,13 +52,13 @@ class WeatherService < ActiveRecord::Base
   end
 
   def recent_cc_score(city)
-    data = comparison_data(city)
+    data = full_comparison_data(city)
     correlation_lows = self.class.gsl_pearson(data[:forecast_lows].map {|a| a[1]}, data[:actual_lows].map {|a| a[1]})
     correlation_highs = self.class.gsl_pearson(data[:forecast_highs].map {|a| a[1]}, data[:actual_highs].map {|a| a[1]})
     ((correlation_lows.abs + correlation_highs.abs * 100)/ 2).to_i
   end
 
-  def comparison_data(city)
+  def full_comparison_data(city)
     Time.zone = city.timezone
     noaa_data = recent_noaa_data(city)
     our_data = recent_our_data(city)
@@ -74,6 +74,22 @@ class WeatherService < ActiveRecord::Base
         data[:actual_lows] << [record.weather_date, record.low]
         data[:forecast_highs] << [record.weather_date, our_record.high]
         data[:actual_highs] << [record.weather_date, record.high]
+      end
+    end
+    data
+  end
+
+  def delta_comparison_data(city)
+    Time.zone = city.timezone
+    noaa_data = recent_noaa_data(city)
+    our_data = recent_our_data(city)
+    data = []
+    noaa_data.each do |record|
+      our_record = our_data.find {|r| r.weather_date == record.weather_date}
+      if our_record.present?
+        delta_low = (our_record.low - record.low).abs
+        delta_high = (our_record.high - record.high).abs
+        data << [record.weather_date, (delta_low+delta_high)/2.0]
       end
     end
     data

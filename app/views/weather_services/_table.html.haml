@@ -8,6 +8,10 @@
       %tr
         %td= s[:service].full_name
         %td #{s[:score]}%
-        
+        %td
+          %span.sparkline= s[:service].delta_comparison_data(@my_city).map {|a| a[1]}.join(",")
 
-
+:javascript
+  $(document).ready(function() {
+    $(".sparkline").sparkline();
+  });

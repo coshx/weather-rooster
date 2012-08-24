@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require foundation
 //= require visualize.jQuery
+//= require jquery.sparkline
 //= require_tree .
