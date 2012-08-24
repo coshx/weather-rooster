@@ -1,27 +1,90 @@
 .seven.columns.centered.about
-  %h1 Weather Rooster
+  %h2 The Most Accurate Weather in Your Neighborhood
+
+  %h4 Which Weather Should You Trust?
+
+  %p Weather Rooster records the forecasts of the best weather services every day.  After the weather happens, Weather Rooster checks how close each service's forecast was to the actual weather.  You can use our accuracy scores to choose the most accurate weather source in your neighborhood.
 
   %br
   %br
   %br
-  
-  %h2 Innovative way to get most accurate weather  
-  
-  %h4 What problems we solve
-  
-  %p Evidence from Facebook and Instagram plus analysis from outside experts has convinced the Federal Trade Commission to today approve the landmark acquisition. After four months of investigation, the UK’s Office Of Fair Trading that works with the FTC also revealed exactly why it approved the deal.
-  
-  %h4 Why this is important
-  
-  %p Evidence from Facebook and Instagram plus analysis from outside experts has convinced the Federal Trade Commission to today approve the landmark acquisition. After four months of investigation, the UK’s Office Of Fair Trading that works with the FTC also revealed exactly why it approved the deal.
-  
-  %h4 Who will use this service
-  
-  %p  Evidence from Facebook and Instagram plus analysis from outside experts has convinced the Federal Trade Commission to today approve the landmark acquisition. After four months of investigation, the UK’s Office Of Fair Trading that works with the FTC also revealed exactly why it approved the deal.
-  
-  %h4 About this product
-  
-  %p This product was started during the hackathon to disrupt weather :) 
-  
-  
-  
+
+  %h2 Frequently Asked Questions
+
+  %h4 What forecast data do you check and when?
+
+  %p Every day at noon local time, we check the forecast highs and lows for the 24-hour period that begins at the next local midnight.
+
+  %h4 How do you score the data?
+
+  %p  We take the most recent data in the last 30 days, and calculate the Pearson coefficient between the forecasts of a given service and the observed weather.  We take the mean of the Pearson coefficients of the high temperatures and the low temperatures, and multiply it by 100 to get our accuracy score.
+
+  %h4 Why are the scores so poor?
+
+  %p We started this project on 8/23/2012 and the first predictions we recorded are for the 24-hour period of 8/25/2012.  Prediction data prior to this date is fake, and therefore is not accurate.
+
+  %p Don't worry, the fake data is just to help us in our development.  Once we have a couple weeks of real data, we will cull it from our database.
+
+  %br
+  %h4 How do you measure the actual weather?
+
+  %p
+    We use
+    = succeed "." do
+      = link_to "observed weather data from NOAA", "http://www.ncdc.noaa.gov/cdo-web/webservices"
+
+  %br
+  %h4 Why don't you have data for my city?
+
+  %p
+    Weather Rooster is a hackathon project that was completed in 48 hours.  We didn't have time to set up all the cities we would like to
+
+  %p
+    We'd love to add your city to Weather Rooster.  Email us your city at
+    = succeed "." do
+      = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
+    or vote in our
+    = succeed "." do
+      = link_to "next cities to add poll", "http://greeneg.gs/what-cities-should-we-add-to-weather-rooster-next"
+
+  %br
+  %h4 Why don't you rank my favorite weather service?
+
+  %p
+    Weather Rooster is a hackathon project that was completed in 48 hours.  We didn't have time to set up all the services we would like to.  These are some services with poorly documented APIs that we didn't have time to play with:
+
+    %ul
+      %li Yahoo! Weather
+      %li Weather.com
+
+  %p
+    We want to rank all the good weather services, but can only rank the weather services  who provide us with their forecast data.  We have requested data access with a number of services:
+
+    %ul
+      %li AccuWeather - we received positive feedback but have not yet been granted access.
+      %li WeatherBug - we requested access but haven't heard anything back.
+
+  %p
+    We'd love to hear what your favorite weather service is!  Email us at
+    = succeed "." do
+      = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
+    or vote in our
+    = succeed "." do
+      = link_to "favorite weather service poll", "http://greeneg.gs/what-s-your-favorite-online-weather-source"
+
+  %p
+    If you have a weather service you'd like us to rank, shoot us an email at
+    = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
+
+  %br
+  %h2 Have another question?
+
+  %p
+    Maybe the answer is in the source code.  Check it out at
+    = succeed "." do
+      = link_to "https://github.com/coshx/weather-rooster", "https://github.com/coshx/weather-rooster"
+
+  %p
+    If you still have questions, send 'em over to
+    = succeed "." do
+      = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
