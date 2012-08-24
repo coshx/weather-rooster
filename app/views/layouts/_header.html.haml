@@ -1,12 +1,5 @@
 .row.header
-  .five.columns
-    %a.logo{:href => '/'}
-      %h1 Weather Rooster
-      %p Today is Wednesday, August, 23rd
-    
-  .three.columns
-    =render 'meta/twitter_tweet'
-  .four.columns
+  .four.columns.push-eight
     %ul.nav
       %li
         =link_to 'About', "about"
@@ -16,4 +9,12 @@
         =link_to 'Join', "#"
       %li
         =link_to 'Login', "#"
+        
+  .five.columns.pull-four
+    %a.logo{:href => '/'}
+      %h1 Weather Rooster
+      %p Today is Wednesday, August, 23rd
+    
+  .three.columns.pull-four
+    =render 'meta/twitter_tweet'
   

@@ -8,6 +8,8 @@
   border-radius:5px;
   cursor:pointer;  
   display:inline-block;
+  margin-top:5px;
+  margin-bottom:5px;
 
   &:hover {
     background: #0B86AB;
@@ -18,4 +20,13 @@
      -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
        -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
           transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
+}
+
+@media only screen and (max-width:767px) {
+.a-button {
+display:block;
+width:90%;
+margin:15px auto;
+}
+
 }

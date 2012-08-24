@@ -2,7 +2,8 @@
   .twelve.columns
     .left_space
       .city 
-        Right now is
-        %span.grey #{@day[0][:string]}
-        in
+        .text
+          Right now is
+          %span.grey #{@day[0][:string]}
+          in
         = render 'cities/list_button'
