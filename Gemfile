@@ -47,7 +47,7 @@ group :assets do
 end
 
 # need 1.7.2
-gem 'jquery-rails', :git => "https://github.com/indirect/jquery-rails"
+gem 'jquery-rails', '2.0.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
