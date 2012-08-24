@@ -54,6 +54,25 @@ class NOAA
     end
   end
 
+  def self.seed_fake_data_for_service(service, cities, years_back)
+    noaa = WeatherService.find_by_short_name("NOAA")
+    cities.each do |city|
+      Time.zone = city.timezone
+      today = Time.current.to_date
+      start_date = today - years_back.years - 30.days # only look back 30 days
+      end_date = today - years_back.years # only look back 30 days
+      while start_date <= end_date
+        weather = self.get_weather_for_date(city.station_id, start_date)
+        if weather.present?
+          weather[:weather_date] = weather[:weather_date] + years_back.years
+          WeatherRecord.create(weather.merge(:city_id => city.id, :weather_service_id => service.id))
+        end
+        start_date += 1.day
+        sleep 1
+      end
+    end
+  end
+
   private
   def self.c_to_f(val)
     val * 9 / 5 + 32
