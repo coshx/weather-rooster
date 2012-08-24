@@ -91,6 +91,7 @@ class WeatherService < ActiveRecord::Base
 
   private
   def self.gsl_pearson(x,y)
+    # thank you http://blog.chrislowis.co.uk/2008/11/24/ruby-gsl-pearson.html
     GSL::Stats::correlation(
       GSL::Vector.alloc(x),GSL::Vector.alloc(y)
     )
