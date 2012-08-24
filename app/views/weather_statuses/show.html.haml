@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Api name:
+  = @weather_status.api_name
+%p
+  %b Name:
+  = @weather_status.name
+
+= link_to 'Edit', edit_weather_status_path(@weather_status)
+\|
+= link_to 'Back', weather_statuses_path

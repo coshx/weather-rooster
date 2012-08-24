@@ -12,5 +12,11 @@ module ApplicationHelper
     str.downcase!
     return str
   end
+  
+  
+  def translate_status(api_name)
+    #status = Weather_status.find_by_api_name(api_name)
+    #return status.name
+  end
 
 end

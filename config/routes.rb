@@ -1,6 +1,8 @@
 WeatherRooster::Application.routes.draw do
 
 
+  resources :weather_statuses
+
   resources :current_forecasts
 
   resources :cities
@@ -15,6 +17,7 @@ WeatherRooster::Application.routes.draw do
   get 'city/:city' => 'home#main'
   get "home/landing"
   get "home/main"
+  get "about" => "home#about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,16 @@
+= form_for @weather_status do |f|
+  -if @weather_status.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@weather_status.errors.count, "error")} prohibited this weather_status from being saved:"
+      %ul
+        - @weather_status.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :api_name
+    = f.text_field :api_name
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'

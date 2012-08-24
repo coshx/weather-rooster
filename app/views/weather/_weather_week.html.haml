@@ -1,0 +1,13 @@
+.weather-week
+  %ul
+    -3.times do |i|
+      %li
+        =(Time.current+(i+1).day).strftime("%a")
+        %br
+        .icon-wrap
+          =image_tag("weather/#{@day[i+1][:string]}.png", :class=>'small-icon');
+        .high
+        #{@day[i+1][:high]}°
+        .low
+        #{@day[i+1][:low]}°
+    
