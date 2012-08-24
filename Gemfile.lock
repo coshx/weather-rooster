@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/twalpole/whenever.git
-  revision: bb2425f91da106065a27c90869776dfb0b148975
-  specs:
-    whenever (0.7.3)
-      activesupport (>= 2.3.4)
-      chronic (~> 0.6.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -197,6 +189,9 @@ GEM
     uglifier (1.2.7)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
+    whenever (0.7.3)
+      activesupport (>= 2.3.4)
+      chronic (~> 0.6.3)
     zurb-foundation (3.0.9)
       compass (>= 0.12.2)
       modular-scale (>= 1.0.2)
@@ -229,5 +224,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   therubyracer (= 0.11.0beta5)
   uglifier (>= 1.0.3)
-  whenever!
+  whenever
   zurb-foundation (~> 3.0.8)
