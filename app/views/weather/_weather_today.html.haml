@@ -6,3 +6,8 @@
   .six.columns
     The most accurate weather today brought to you today 
     =link_to @provider_name, "#"
+    %br
+    Accuracy of #{@services.first[:score]} %
+    %br
+    %br
+    Today's high: #{@day[0][:high]}° Low:#{@day[0][:high]}°

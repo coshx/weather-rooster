@@ -24,7 +24,6 @@ class HomeController < ApplicationController
       @day[i][:low] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_low"]
 
     end
-    
 
   end
 end
