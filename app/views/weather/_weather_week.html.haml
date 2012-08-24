@@ -5,7 +5,7 @@
         =(Time.current+(i+1).day).strftime("%a")
         %br
         .icon-wrap
-          =image_tag('weather/sunny.png', :class=>'small-icon');
+          =image_tag("weather/#{@day[i+1][:string]}.png", :class=>'small-icon');
         .high
         #{@day[i+1][:high]}°
         .low

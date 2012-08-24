@@ -1,6 +1,6 @@
 .row
   .six.columns
-    .icon.cloudy.left_icon
+    .icon.left_icon{:style => "background:url('/assets/weather/#{@day[0][:string]}.png')"}
     %span.weather-now
       #{@current_temp}°#{"<span class=measuring>F</span>".html_safe}
   .six.columns

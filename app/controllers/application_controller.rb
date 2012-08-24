@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :closest_city, :request_city 
+  helper_method :closest_city, :request_city, :translate_status
+  
+  
+  def translate_status(api_name)
+    status = WeatherStatus.find_by_api_name(api_name)
+    return status.name
+  end
   
   def request_city
     

@@ -1,6 +1,8 @@
 WeatherRooster::Application.routes.draw do
 
 
+  resources :weather_statuses
+
   resources :current_forecasts
 
   resources :cities

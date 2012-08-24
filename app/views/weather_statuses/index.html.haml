@@ -1,0 +1,21 @@
+%h1 Listing weather_statuses
+
+%table
+  %tr
+    %th Api name
+    %th Name
+    %th
+    %th
+    %th
+
+  - @weather_statuses.each do |weather_status|
+    %tr
+      %td= weather_status.api_name
+      %td= weather_status.name
+      %td= link_to 'Show', weather_status
+      %td= link_to 'Edit', edit_weather_status_path(weather_status)
+      %td= link_to 'Destroy', weather_status, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Weather status', new_weather_status_path

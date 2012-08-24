@@ -1,3 +1,5 @@
+$grey:#999999;
+
 body {
   position:relative;
   overflow-x:hidden;  
@@ -31,3 +33,7 @@ margin-top:30px;
     margin-bottom:15px;
   }
 
+
+.grey {
+color:$grey;
+}
