@@ -6,12 +6,19 @@ class WeatherService < ActiveRecord::Base
   has_many :weather_records
   has_many :current_forecasts
 
-  def get_tomorrows_weather(city)
+  def pull_tomorrows_weather(city)
     config_barometer
     barometer = Barometer.new(city.postal_code)
     weather = barometer.measure
-    {:low => weather.forecast[1].low.to_i, :high => weather.forecast[1].high.to_i, :date => weather.forecast[1].date, :fetched_at => Time.current}
-
+    p = {:low => weather.forecast[1].low.to_i, :high => weather.forecast[1].high.to_i, :recorded_at => Time.current}
+    key_params = {:city_id => city.id, :weather_service_id => self.id,
+                  :weather_date => weather.forecast[1].date}
+    records = WeatherRecord.where(key_params)
+    if records.any?
+      # noop
+    else
+      WeatherRecord.create(key_params.merge(p))
+    end
   end
 
   def pull_latest_forecast(city)
@@ -112,6 +119,26 @@ class WeatherService < ActiveRecord::Base
     error_lows = (1.0/n)*sum_lows
     error_highs = (1.0/n)*sum_highs
     # NOTE need to address averaging these and projecting them on 0-100
+  end
+
+  def self.pull_all_tomorrow(timezone)
+    WeatherService.where(:active => true).shuffle.each do |service|
+      cities = City.find_all_by_timezone(timezone).map do |c|
+        {:city => c, :tries => 0}
+      end
+      while cities.any?
+        cities.each do |city|
+          begin
+            service.pull_tomorrows_weather(city[:city])
+            cities -= [city]
+          rescue
+            city[:tries] += 1
+            cities -= [city] if city[:tries] > 10
+          end
+          sleep 1
+        end
+      end
+    end
   end
 
   private

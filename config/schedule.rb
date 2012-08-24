@@ -26,3 +26,20 @@ end
 every 30.minutes do
   rake "weather_rooster:pull_latest_actual"
 end
+
+# i think this is noon pacific during DST
+every :day, :at => '7pm' do
+  rake 'weather_rooster:pull_tomorrow_pacific'
+end
+
+every :day, :at => '6pm' do
+  rake 'weather_rooster:pull_tomorrow_mountain'
+end
+
+every :day, :at => '5pm' do
+  rake 'weather_rooster:pull_tomorrow_central'
+end
+
+every :day, :at => '4pm' do
+  rake 'weather_rooster:pull_tomorrow_eastern'
+end
