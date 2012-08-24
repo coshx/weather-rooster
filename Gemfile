@@ -14,8 +14,8 @@ gem 'haml-rails'
 gem 'barometer'
 gem 'gsl'
 
-# cron dsl with timezone support (hence from git)
-gem 'whenever', :git => 'git://github.com/twalpole/whenever.git', :require => false
+# cron dsl
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'pry'
