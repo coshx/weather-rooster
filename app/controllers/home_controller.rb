@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def about
   end
 
-  def analyics
+  def analytics
     @my_city = closest_city
     @services = WeatherService.where(:active => true)
     @services.map! {|s| {:service => s,
