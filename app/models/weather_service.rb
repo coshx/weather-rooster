@@ -144,6 +144,10 @@ class WeatherService < ActiveRecord::Base
     end
   end
 
+  def url_for_city(city)
+    zipcode_url_template.gsub(/ZIPCODE_HERE/, city.postal_code)
+  end
+
   private
   def self.gsl_pearson(x,y)
     # thank you http://blog.chrislowis.co.uk/2008/11/24/ruby-gsl-pearson.html
