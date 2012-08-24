@@ -6,17 +6,41 @@ class WeatherService < ActiveRecord::Base
   has_many :weather_records
 
   def get_tomorrows_weather(zipcode)
-    if short_name == "Google"
-      Barometer.config = { 1 => [:google] }
-    elsif short_name == "Wunderground"
-      Barometer.config = { 1 => [:wunderground] }
-    else
-      return "ERROR, not a recognized service: #{short_name}"
-    end
+    config_barometer
     barometer = Barometer.new(zipcode.to_s)
     weather = barometer.measure
     {:low => weather.forecast[1].low.to_i, :high => weather.forecast[1].high.to_i, :date => weather.forecast[1].date, :fetched_at => Time.current}
 
+  end
+
+  def pull_latest_forecast(city)
+    config_barometer
+    barometer = Barometer.new(city.postal_code)
+    key_params = {:city_id => city.id, :weather_service_id => self.id}
+    p = {}
+    weather = barometer.measure
+    if weather.current.current_at.present?
+      p[:current_at] = weather.current.current_at.to_t
+    else
+      p[:current_at] = Time.current
+    end
+    p[:current_temp] = weather.current.temperature.to_i
+    weather.forecast.slice(0..5).each_with_index do |f, i|
+      p["day_#{i}_high"] = f.high.to_i
+      p["day_#{i}_low"] = f.low.to_i
+      if f.respond_to?(:icon)
+        p["day_#{i}_string"] = f.icon
+      else
+        p["day_#{i}_string"] = f.condition
+      end
+    end
+    records = CurrentForecast.where(key_params)
+    if records.any?
+      record = records.first
+      record.update_attributes(p)
+    else
+      record = CurrentForecast.create(key_params.merge(p))
+    end
   end
 
   def recent_cc_score(city)
@@ -95,5 +119,15 @@ class WeatherService < ActiveRecord::Base
     GSL::Stats::correlation(
       GSL::Vector.alloc(x),GSL::Vector.alloc(y)
     )
+  end
+
+  def config_barometer
+    if short_name == "Google"
+      Barometer.config = { 1 => [:google] }
+    elsif short_name == "Wunderground"
+      Barometer.config = { 1 => [:wunderground] }
+    else
+      return "ERROR, not a recognized service: #{short_name}"
+    end
   end
 end
