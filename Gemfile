@@ -12,6 +12,7 @@ gem 'pg'
 gem 'haml-rails'
 
 gem 'barometer'
+gem 'gsl'
 
 group :development, :test do
   gem 'pry'
