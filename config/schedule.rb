@@ -22,3 +22,7 @@
 every 15.minutes do
   rake "weather_rooster:pull_latest_forecasts"
 end
+
+every 30.minutes do
+  rake "weather_rooster:pull_latest_actual"
+end

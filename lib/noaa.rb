@@ -35,11 +35,12 @@ class NOAA
   def self.pull_latest_data(cities)
     noaa = WeatherService.find_by_short_name("NOAA")
     cities.each do |city|
+      Time.zone = city.timezone
       records = city.weather_records.where(:weather_service_id => noaa.id).order("weather_date ASC")
       if records.any?
         start_date = records.last.weather_date + 1.day
       else
-        start_date = Date.today - 30.days # only look back 30 days
+        start_date = Time.current.to_date - 30.days # only look back 30 days
       end
       end_date = self.get_date_of_most_recent_data(city.station_id)
       sleep 1
