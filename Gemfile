@@ -14,6 +14,9 @@ gem 'haml-rails'
 gem 'barometer'
 gem 'gsl'
 
+# cron dsl
+gem 'whenever', :require => false
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
