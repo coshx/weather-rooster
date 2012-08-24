@@ -1,3 +1,23 @@
-// Place all the styles related to the WeatherServices controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$grey:#999999;
+
+.main-table {
+
+  width:100%;
+  border:none;
+  background:none;
+  
+  td {
+    border-top:1px dotted $grey !important;
+    border-bottom:1px dotted $grey;
+
+    &:first-child {
+      border-top:2px solid $grey;
+    }
+    &:last-child {
+      border-bottom:1px solid $grey;
+    }
+    
+  }
+
+
+}

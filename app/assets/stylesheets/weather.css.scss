@@ -1,0 +1,46 @@
+.weather-now {
+  font-size: 86px;
+  color:black;
+}
+.measuring {
+  font-size:48px;
+  color:black;
+}
+.weather {
+margin-bottom:30px;
+}
+
+
+.icon {
+  width:80px;
+  height:80px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1) inset;
+}
+
+.left_icon {
+display:block;
+margin-right:20px;
+float:left;
+}
+
+.cloudy {
+  background:url('weather/cloudy.png');
+}
+.foggy {
+  background:url('weather/foggy.png');
+}
+.partly-cloudy {
+  background:url('weather/partly-cloudy.png');
+}
+.raining {
+  background:url('weather/raining.png');
+}
+.snowing {
+  background:url('weather/snowing.png');
+}
+.sunny {
+  background:url('weather/sunny.png');
+}
+.thunderstorm {
+  background:url('weather/thunderstorm.png');
+}

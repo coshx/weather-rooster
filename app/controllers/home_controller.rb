@@ -5,7 +5,6 @@ class HomeController < ApplicationController
   def thank_you
   end
   def main
-    
-    
+    @cities = City.all 
   end
 end

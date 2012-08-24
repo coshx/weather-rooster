@@ -1,0 +1,33 @@
+$grey:#999999;
+$orange:orange;
+.header {
+padding-top:15px;
+}
+.logo {
+  h1 {
+    font-size: 26px;
+    text-transform:uppercase; 
+    color:black;   
+    font-weight:normal;
+  }
+  p {
+    font-size:14px;
+    color:$grey;
+  }
+}
+
+.nav {
+width:100%;
+list-style-type:none;
+  a {
+    font-size:16px;
+    color:black;
+    &:hover {
+      color:$orange;
+    }
+  }
+  li {
+    margin-right:20px;
+    float:left;
+  }
+}

@@ -1,0 +1,6 @@
+.small.secondary.button.dropdown
+  #{closest_city.name}
+  %ul
+    -@cities.each do |c|
+      %li=link_to c.name, "/city/" + slug(c.name)
+      %li.divider
