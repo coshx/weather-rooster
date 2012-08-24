@@ -76,6 +76,17 @@ width:292px !important;
 
 }
 
+
+@media only screen and (max-width:450px) {
+.logo {
+  display:block;
+  background:url(logo.png) no-repeat top center;
+  padding-left:0px;
+  padding-top:60px;
+  width:100%;
+  }
+}
+
 .gradient-bar {
 margin-top:30px;
     width:100%;
@@ -92,3 +103,18 @@ margin-top:30px;
 .grey {
 color:$grey;
 }
+
+@media only screen and (min-width:767px) and (max-width:850px) {
+.weather-description {
+display:none;
+}
+.weather-description-tablet {
+padding-top:30px;
+display:block !important;
+}
+}
+
+.weather-description-tablet {
+  display:none;
+}
+

@@ -6,4 +6,13 @@
     = render 'weather/weather_week'
 
 .row
+  .twelve.columns
+    .weather-description-tablet.left_space
+      The most accurate weather brought to you today by
+      =link_to @provider_name, "#"
+      , accuracy of #{@services.first[:score]} %.
+      %br
+      Today's high: #{@day[0][:high]}° Low:#{@day[0][:low]}°
+    
+.row
   .gradient-bar
