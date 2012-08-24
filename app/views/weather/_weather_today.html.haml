@@ -6,9 +6,9 @@
   .six.columns
     .weather-description
       The most accurate weather brought to you today by
-      =link_to @provider_name, "#"
+      =link_to @provider_name, @services.first[:service].url_for_city(@my_city)
       %br
       %br
-      Accuracy of #{@services.first[:score]} %
+      Accuracy of #{@services.first[:score]}%
       %br
       Today's high: #{@day[0][:high]}° Low:#{@day[0][:low]}°

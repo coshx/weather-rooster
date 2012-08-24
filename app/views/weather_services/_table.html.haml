@@ -7,7 +7,7 @@
   %tbody
     - @services.each do |s|
       %tr
-        %td= s[:service].full_name
+        %td= link_to s[:service].full_name, s[:service].url_for_city(@my_city)
         %td #{s[:score]}%
         %td
           %span.sparkline= s[:service].delta_comparison_data(@my_city).map {|a| a[1]}.join(",")
