@@ -6,15 +6,21 @@ $grey:#999999;
   border:none;
   background:none;
   
-  td {
+  tr {
+    td {
     border-top:1px dotted $grey !important;
     border-bottom:1px dotted $grey;
-
+    }
+    
     &:first-child {
-      border-top:2px solid $grey;
+      td {
+        border-top:2px solid $grey;
+      }
     }
     &:last-child {
-      border-bottom:1px solid $grey;
+      td {
+        border-bottom:1px solid $grey;
+      }
     }
     
   }
