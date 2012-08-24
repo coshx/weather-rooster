@@ -1,5 +1,5 @@
 .row.header
-  .four.columns.push-eight
+  .five.columns.push-seven
     %ul.nav
       %li
         =link_to 'About', "/about"
@@ -8,11 +8,16 @@
       %li
         =link_to 'Contact', "/contact"
         
-  .five.columns.pull-four
+  .five.columns.pull-five
     %a.logo{:href => '/'}
       %h1 Weather Rooster
-      %p Today is Wednesday, August, 23rd
+      -if controller.action_name == 'main'
+        -headline = "Today is " + Time.current.strftime("%A, %B, %d")
+      -else
+        -headline = " The Most Accurate Weather"
+      
+      %p=headline
     
-  .three.columns.pull-four
+  .two.columns.pull-five
     =render 'meta/twitter_tweet'
   
