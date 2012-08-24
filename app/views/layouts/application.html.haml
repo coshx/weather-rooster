@@ -11,7 +11,7 @@
   %body
     .container
       =render 'layouts/header'
-      -if controller.action_name == 'main'
+      -if controller.action_name == 'main' or controller.action_name == 'city_details'
         = render 'home/city'
         = render 'weather/weather'
       .main.row

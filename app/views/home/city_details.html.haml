@@ -1,8 +1,9 @@
-%h1 Charts and Analytics for #{@my_city.name}
+.left_space
+  %h2 Charts and Analytics for #{@my_city.name}
 
-%p We provide statistical LIVE data on the gap in forecast and actual weather for each of our weather providers.
+  %p We provide statistical LIVE data on the gap in forecast and actual weather for each of our weather providers.
 
-- @services.each do |s|
-  .row
-    = render :partial => 'weather_services/chart', :locals => {:weather_service => s[:service], :city => @my_city}
+  - @services.each do |s|
+    .row
+      = render :partial => 'weather_services/chart', :locals => {:weather_service => s[:service], :city => @my_city}
 

@@ -13,6 +13,26 @@ class HomeController < ApplicationController
                                :score => s.recent_cc_score(@my_city) } }
     @services.sort! {|x,y| y[:score] <=> x[:score] }
     
+    
+    
+    
+    #weather
+     @cities = City.all
+     
+     @current_temp = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first.current_temp   
+    
+    @provider_name  = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first.weather_service.short_name
+    
+    @day = []
+    
+    4.times do |i|
+      @day[i] = {}
+      @day[i][:high] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_high"]
+      @day[i][:low] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_low"]
+      @day[i][:string] = translate_status(@services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_string"])
+    end
+    
+    
   end
   
   def landing
