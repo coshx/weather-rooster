@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
+  
+  def about
+  end
+  
   def landing
     @cities = City.all 
   end
