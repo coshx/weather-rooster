@@ -1,18 +1,17 @@
 !!! 5
 %html
-%head
-  %title WeatherRooster
-  %meta(content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport")/
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
-  = render :partial => 'meta/google_analytics'
-  
-%body
-  .container
-    =render 'layouts/header'
-    =yield
-  =render 'layouts/footer'
+  %head
+    %title WeatherRooster
+    %meta(content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" name="viewport")/
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = render :partial => 'meta/google_analytics'
 
-  = render :partial => 'meta/facebook_meta'
+  %body
+    .container
+      =render 'layouts/header'
+      =yield
+    =render 'layouts/footer'
 
+    = render :partial => 'meta/facebook_meta'

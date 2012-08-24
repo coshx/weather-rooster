@@ -7,3 +7,7 @@
       = render 'weather_services/table'
   .four.columns
     = render 'home/join_button'
+
+- @services.each do |s|
+  .row
+    = render :partial => 'weather_services/chart', :locals => {:weather_service => s[:service], :city => @my_city}

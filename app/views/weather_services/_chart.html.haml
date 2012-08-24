@@ -1,0 +1,11 @@
+%h1= weather_service.full_name
+
+- data = weather_service.comparison_data(city)
+
+= render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_lows], :actual_data => data[:actual_lows], :table_class => "lows_#{weather_service.short_name.underscore}"}
+
+= render :partial => "weather_services/chart_js", :locals => {:chart_class => "lows_#{weather_service.short_name.underscore}"}
+
+= render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_highs], :actual_data => data[:actual_highs], :table_class => "highs_#{weather_service.short_name.underscore}"}
+
+= render :partial => "weather_services/chart_js", :locals => {:chart_class => "highs_#{weather_service.short_name.underscore}"}

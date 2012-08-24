@@ -1,0 +1,17 @@
+%table.graph{:class => table_class}
+  %caption= table_class.capitalize
+  %thead
+    %tr
+      %td
+      - forecast_data.each do |r|
+        %th{:scope => "col"}= "#{r[0].month}/#{r[0].day}"
+
+  %tbody
+    %tr
+      %th{:scope => "row"} #{weather_service.short_name} (Forecast)
+      - forecast_data.each do |r|
+        %td #{r[1]}
+    %tr
+      %th{:scope => "row"} NOAA (Actual)
+      - actual_data.each do |r|
+        %td #{r[1]}

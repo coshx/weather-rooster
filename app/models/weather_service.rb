@@ -52,51 +52,38 @@ class WeatherService < ActiveRecord::Base
   end
 
   def recent_cc_score(city)
-    noaa = WeatherService.find_by_short_name("NOAA")
-    Time.zone = city.timezone
-    # look 30 days back
-    start_date = Time.current.to_date - 30.days
-    end_date = Time.current.to_date
-    noaa_data = WeatherRecord.where(:weather_service_id => noaa.id, :city_id => city.id)
-    noaa_data = noaa_data.where(["weather_date >= ?", start_date])
-    noaa_data = noaa_data.where(["weather_date <= ?", end_date])
-    noaa_data = noaa_data.order("weather_date asc")
-    our_data = WeatherRecord.where(:weather_service_id => self.id, :city_id => city.id)
-    our_data = our_data.where(["weather_date >= ?", start_date])
-    our_data = our_data.where(["weather_date <= ?", end_date])
-    our_data = our_data.order("weather_date asc")
-    forecast_lows = []
-    forecast_highs = []
-    actual_lows = []
-    actual_highs = []
-    noaa_data.each do |record|
-      our_record = our_data.find {|r| r.weather_date == record.weather_date}
-      if our_record.present?
-        forecast_lows << record.low
-        actual_lows << our_record.low
-        forecast_highs << record.high
-        actual_highs << our_record.high
-      end
-    end
-    correlation_lows = self.class.gsl_pearson(forecast_lows, actual_lows)
-    correlation_highs = self.class.gsl_pearson(forecast_highs, actual_highs)
+    data = comparison_data(city)
+    correlation_lows = self.class.gsl_pearson(data[:forecast_lows].map {|a| a[1]}, data[:actual_lows].map {|a| a[1]})
+    correlation_highs = self.class.gsl_pearson(data[:forecast_highs].map {|a| a[1]}, data[:actual_highs].map {|a| a[1]})
     ((correlation_lows.abs + correlation_highs.abs * 100)/ 2).to_i
   end
 
+  def comparison_data(city)
+    Time.zone = city.timezone
+    noaa_data = recent_noaa_data(city)
+    our_data = recent_our_data(city)
+    data = {}
+    data[:forecast_lows] = []
+    data[:forecast_highs] = []
+    data[:actual_lows] = []
+    data[:actual_highs] = []
+    noaa_data.each do |record|
+      our_record = our_data.find {|r| r.weather_date == record.weather_date}
+      if our_record.present?
+        data[:forecast_lows] << [record.weather_date, our_record.low]
+        data[:actual_lows] << [record.weather_date, record.low]
+        data[:forecast_highs] << [record.weather_date, our_record.high]
+        data[:actual_highs] << [record.weather_date, record.high]
+      end
+    end
+    data
+  end
+
   def recent_mse_score(city)
-    noaa = WeatherService.find_by_short_name("NOAA")
     Time.zone = city.timezone
     # look 30 days back
-    start_date = Time.current.to_date - 30.days
-    end_date = Time.current.to_date
-    noaa_data = WeatherRecord.where(:weather_service_id => noaa.id, :city_id => city.id)
-    noaa_data = noaa_data.where(["weather_date >= ?", start_date])
-    noaa_data = noaa_data.where(["weather_date <= ?", end_date])
-    noaa_data = noaa_data.order("weather_date asc")
-    our_data = WeatherRecord.where(:weather_service_id => self.id, :city_id => city.id)
-    our_data = our_data.where(["weather_date >= ?", start_date])
-    our_data = our_data.where(["weather_date <= ?", end_date])
-    our_data = our_data.order("weather_date asc")
+    noaa_data = recent_noaa_data(city)
+    our_data = recent_our_data(city)
     observed_lows = []
     observed_highs = []
     actual_lows = []
@@ -158,4 +145,20 @@ class WeatherService < ActiveRecord::Base
       return "ERROR, not a recognized service: #{short_name}"
     end
   end
+
+  def recent_noaa_data(city)
+    noaa = WeatherService.find_by_short_name("NOAA")
+    start_date = Time.current.to_date - 30.days
+    end_date = Time.current.to_date
+    @noaa_data ||= {}
+    @noaa_data[city.name.to_sym] ||= WeatherRecord.where(:weather_service_id => noaa.id, :city_id => city.id).where(["weather_date >= ?", start_date]).where(["weather_date <= ?", end_date]).order("weather_date asc")
+  end
+
+  def recent_our_data(city)
+    start_date = Time.current.to_date - 30.days
+    end_date = Time.current.to_date
+    @our_data ||= {}
+    @our_data[city.name.to_sym] ||= WeatherRecord.where(:weather_service_id => self.id, :city_id => city.id).where(["weather_date >= ?", start_date]).where(["weather_date <= ?", end_date]).order("weather_date asc")
+  end
+
 end
