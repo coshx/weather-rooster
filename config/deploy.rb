@@ -2,6 +2,9 @@ require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 require 'bundler/capistrano'
 require 'hipchat/capistrano'
 
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 load 'deploy/assets'
 
 set :application, "weather-rooster"
