@@ -75,3 +75,7 @@
 // $tooltipFontSizeScreenSmall: 14;
 // $tooltipBackgroundOpacityScreenSmall: 0.85;
 @import 'foundation';
+
+table thead tr th, table tfoot tr td {
+  padding: 8px 10px 9px 0px;
+}
