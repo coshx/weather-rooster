@@ -1,10 +1,10 @@
 %table.main-table
-  %tr
-    %th Ranking
-    %th Accuracy (?)
-    %th Previous Position
-
-  - @services.each do |s|
+  %thead
     %tr
-      %td= s[:service].full_name
-      %td #{s[:score]}%
+      %th Ranking
+      %th Accuracy (?)
+  %tbody
+    - @services.each do |s|
+      %tr
+        %td= s[:service].full_name
+        %td #{s[:score]}%

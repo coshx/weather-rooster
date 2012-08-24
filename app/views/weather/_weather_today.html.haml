@@ -2,6 +2,7 @@
   .six.columns
     .icon.cloudy.left_icon
     %span.weather-now
-      58°#{"<span class=measuring>F</span>".html_safe}
+      #{@current_temp}°#{"<span class=measuring>F</span>".html_safe}
   .six.columns
-    The most accurate weather today brought to you today AccuWeather
+    The most accurate weather today brought to you today 
+    =link_to @provider_name, "#"

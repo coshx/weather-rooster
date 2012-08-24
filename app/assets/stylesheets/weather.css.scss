@@ -3,14 +3,15 @@
   color:black;
   margin-left:80px;
   display:block;
+  height:80px;
 }
 .measuring {
   font-size:48px;
   color:black;
 }
 .weather {
-margin-bottom:30px;
 overflow:hidden;
+min-height:80px;
 //position:relative;
 }
 
