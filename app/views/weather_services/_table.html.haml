@@ -3,6 +3,7 @@
     %tr
       %th Ranking
       %th Accuracy #{"<a href='#accuracy_detail' data-reveal-id='accuracy'>(?)</a>".html_safe}
+      %th Error #{"<a href='#accuracy_detail' data-reveal-id='error'>(?)</a>".html_safe}
   %tbody
     - @services.each do |s|
       %tr
