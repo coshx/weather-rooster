@@ -1,6 +1,7 @@
 
 
 .a-button {
+  border:none !important;
   background: #2BA6CB;
   color:white;
   text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
@@ -10,6 +11,7 @@
   display:inline-block;
   margin-top:5px;
   margin-bottom:5px;
+  font-size:16px;
 
   &:hover {
     background: #0B86AB;
@@ -27,6 +29,15 @@
 display:block;
 width:90%;
 margin:15px auto;
+}
+
+}
+
+@media only screen and (max-width:767px) {
+input[type=email] {
+display:block  !important;
+width:90% !important;
+margin:15px auto  !important;
 }
 
 }
