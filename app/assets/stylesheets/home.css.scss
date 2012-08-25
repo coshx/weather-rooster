@@ -1,3 +1,5 @@
+$grey: #999999;
+
 .city {
     font-size:16px;  
     margin-top:20px;
@@ -5,9 +7,13 @@
     color:black;
     .text {
     display:inline;
+    color:$grey;
     }
 }
 
+.black {
+color:#666666;
+}
 
 .join-button {
   p {
@@ -17,10 +23,10 @@
 }
 
 .view-city-details {
-  padding-top:30px;
+  padding-top:50px;
   padding-bottom:30px;
   a {
-    color: #999999;
+    #color: #999999;
   }
 }
 

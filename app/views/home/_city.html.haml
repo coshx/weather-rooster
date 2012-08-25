@@ -3,7 +3,7 @@
     .left_space
       .city 
         .text
-          Right now is
-          %span.grey #{@day[0][:string]}
+          It's #{Time.current.strftime("%A, %B, %d, at %I:%M %p")} and
+          %span.black #{@day[0][:string]}
           in
         = render 'cities/list_button'
