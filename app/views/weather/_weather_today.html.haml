@@ -5,7 +5,7 @@
       #{@current_temp}°#{"<span class=measuring>F</span>".html_safe}
   .six.columns
     .weather-description
-      The most accurate weather brought to you today by
+      Your most accurate weather provided by
       =link_to @provider_name, @services.first[:service].url_for_city(@my_city)
       %br
       %br
