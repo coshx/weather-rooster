@@ -1,17 +1,17 @@
 WeatherRooster::Application.routes.draw do
 
 
-  resources :weather_statuses
+  resources :weather_statuses, :only => [:index, :show]
 
-  resources :current_forecasts
+  resources :current_forecasts, :only => [:index, :show]
 
-  resources :cities
+  resources :cities, :only => [:index, :show]
 
-  resources :weather_records
+  resources :weather_records, :only => [:index, :show]
 
-  resources :weather_services
+  resources :weather_services, :only => [:index, :show]
 
-  resources :users
+  resources :users, :only => [:index, :show]
 
   get "home/thank_you"
   get 'city/:city' => 'home#main'
