@@ -1,14 +1,12 @@
-%h1 Contact us
+.seven.columns.centered.about
+  %h2 Contact us
 
-%br
-%h4
-  Email us at
-  = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
+  %br
+  %p
+    Email us at
+    = link_to "weatherrooster@coshx.com", "mailto:weatherrooster@coshx.com"
+    We'd love to hear from you!
 
-%br
-%h4 We'd love to hear from you!
-
-%br
-%h4 To receive updates when we improve Weather Rooster, please enter your email.
-= render 'meta/mail_chimp_signup'
+  %p To receive updates when we improve Weather Rooster, please enter your email.
+  = render 'meta/mail_chimp_signup'
 
