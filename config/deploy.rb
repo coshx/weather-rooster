@@ -27,13 +27,14 @@ set :hipchat_room_name, "Weather Rooster"
 set :hipchat_announce, true
 
 set :branch, "master"
+set :user, "deploy"
 
 # deploy task for Passenger
 namespace :deploy do
 
   desc "Tell Passenger to restart the app"
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+    run "touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
   task :set_current_release, :roles => :app do
