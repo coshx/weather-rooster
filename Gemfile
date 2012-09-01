@@ -23,12 +23,14 @@ group :development, :test do
   gem 'pry-rails', :group => :development
   gem 'rb-readline'
   gem 'rspec'
+
+  # deployment
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'rvm-capistrano'
   gem 'hipchat'
 end
 
-# deployment
-gem 'capistrano'
-gem 'rvm-capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.

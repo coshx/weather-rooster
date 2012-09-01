@@ -1,13 +1,12 @@
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 require 'bundler/capistrano'
 require 'hipchat/capistrano'
-
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
-
 load 'deploy/assets'
 
-set :application, "weather-rooster"
+set :stages, %w(production staging)
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
+
 set :repository,  "git@github.com:coshx/weather-rooster.git"
 
 set :scm, :git
@@ -17,17 +16,19 @@ role :app, "weatherrooster.com"
 role :db,  "weatherrooster.com", :primary => true
 
 set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-1.9.3@weather-rooster'
 
 set :rvm_bin_path, "/usr/local/rvm/bin"
-set :deploy_to, "/opt/#{application}"
 
 set :hipchat_token, "89d684618c0efae42e66b30900961c"
 set :hipchat_room_name, "Weather Rooster"
 set :hipchat_announce, true
 
-set :branch, "master"
 set :user, "deploy"
+
+set(:application) {"weather-rooster-#{stage}"}
+set(:rvm_ruby_string) {"ruby-1.9.3@weather-rooster-#{stage}"}
+set(:hipchat_env) { stage }
+set(:deploy_to) {"/opt/#{application}"}
 
 # deploy task for Passenger
 namespace :deploy do
