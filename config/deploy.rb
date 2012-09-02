@@ -26,7 +26,6 @@ set :hipchat_announce, true
 set :user, "deploy"
 
 set(:application) {"weather-rooster-#{stage}"}
-set(:rvm_ruby_string) {"ruby-1.9.3@weather-rooster-#{stage}"}
 set(:hipchat_env) { stage }
 set(:deploy_to) {"/opt/#{application}"}
 
