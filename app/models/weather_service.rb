@@ -161,6 +161,8 @@ class WeatherService < ActiveRecord::Base
       Barometer.config = { 1 => [:weather_bug => {:keys => API_KEYS["weather_bug"]}] }
     elsif short_name == "Wunderground"
       Barometer.config = { 1 => [:wunderground] }
+    elsif short_name == "Yahoo!"
+      Barometer.config = { 1 => [:yahoo] }
     else
       return "ERROR, not a recognized service: #{short_name}"
     end
