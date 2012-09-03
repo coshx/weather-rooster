@@ -9,5 +9,6 @@
       %td=c.name
       -@services.each do |s|
         %td
-          1
+          =s.weather_records.order(:created_at).last.created_at.strftime("%v %R")
+          =s.current_forecasts.order(:created_at).last.created_at.strftime("%v %R")
       
