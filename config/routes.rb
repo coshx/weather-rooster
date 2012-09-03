@@ -1,5 +1,9 @@
 WeatherRooster::Application.routes.draw do
 
+  root :to => 'home#status', :constraints => { :subdomain => 'status' }
+  # eg status.weatherrooster.com/about redirects to weatherrooster.com/about
+  #   http://stackoverflow.com/a/7352878/283398
+  match '(*any)' => redirect { |p, req| req.url.sub('status.', '') }, :constraints => { :host => /^status\./ }
 
   resources :weather_statuses, :only => [:index, :show]
 
@@ -72,7 +76,6 @@ WeatherRooster::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#status', :constraints => { :subdomain => 'status' }
    root :to => 'home#main'
 
   # See how all your routes lay out with "rake routes"
