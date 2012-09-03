@@ -21,6 +21,8 @@ gem 'gsl'
 # cron dsl
 gem 'whenever', :require => false
 
+gem 'hipchat'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
@@ -32,7 +34,6 @@ group :development, :test do
   gem 'capistrano'
   gem 'capistrano-ext'
   gem 'rvm-capistrano'
-  gem 'hipchat'
 
   gem "cucumber-rails", "~> 1.0", require: false
   gem "factory_girl_rails"

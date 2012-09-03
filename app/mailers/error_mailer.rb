@@ -1,5 +1,3 @@
-require 'hipchat'
-
 class ErrorMailer < ActionMailer::Base
   default :from => "weatherrooster@coshx.com"
   
