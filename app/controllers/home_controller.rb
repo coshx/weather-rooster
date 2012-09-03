@@ -4,8 +4,8 @@ class HomeController < ApplicationController
     @cities = City.all
     @my_city = closest_city
     @services = WeatherService.where(:active => true)
-    @services.map! {|s| {:service => s,
-                               :score => s.recent_cc_score(@my_city) } }
+    binding.pry
+    #@services.map! {|s| {:service => s, :score => s.recent_cc_score(@my_city) } }
   end
   
   def about

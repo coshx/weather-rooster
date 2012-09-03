@@ -1,8 +1,8 @@
 %table 
   %tr
-    %td=c.name
+    %td
     -@services.each do |s|
-      %td=s.name
+      %td=s.short_name
                 
   -@cities.each do |c|
     %tr
