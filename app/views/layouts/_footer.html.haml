@@ -2,8 +2,14 @@
 .container.footer
   .row
     .six.columns
-      This is an open source project. 
-      =link_to 'GitHub account', 'https://github.com/coshx/weather-rooster'
+      %ul.footer-links
+        %li
+          This is an open source project.
+          %br
+          =link_to 'GitHub account', 'https://github.com/coshx/weather-rooster'
+        %li
+          WeatherRooster API documentation
+          %br
+          =link_to 'WeatherRooster API', '/api'
     .six.columns
       =render 'meta/facebook_likebox'
-

@@ -1,0 +1,46 @@
+.seven.columns.centered.about
+  %h2 WeatherRooster API documentation
+
+  %br
+  %h4 What Weather Rooster API does
+
+  %p Weather Rooster agrigates data from various providers, calculate accuracy. All data that Weather Rooster uses is avaliable through the API
+
+  %h4 Data Providers
+
+  %p
+    The list of data providers:
+    %br
+    %b http://weatherrooster.com/api/providers
+
+  %h4 Cities
+
+  %p
+    The list of cities, where we calculate the accuracy of the data providers:
+    %br
+    %b http://weatherrooster.com/api/cities
+
+  %h4 Weather Records
+
+  %p
+    Weather Rooster agrigates weather forecasts from different providers. We call it Weather Records. And keep it in the database, so later we can calculate the accuracy.
+    %br
+    %b http://weatherrooster.com/api/weather_records/:data
+    %br
+    Example, weather records for the First of September:
+    %a{:href => 'http://weatherrooster.com/api/weather_records/1-9-12'}
+      http://weatherrooster.com/api/weather_records/1-9-12
+
+  %h4 Rating for a City
+
+  %p
+    Weather Rooster calculate the rating of Weather Providers. This rating is available through the API for each city supported by Weather Rooster.
+    %br
+    %b http://weatherrooster.com/api/city_detail/:city
+    %br
+    Example, rating for Los_Angeles_CA:
+    %a{:href => 'http://weatherrooster.com/api/city_detail/Los_Angeles_CA'}
+      http://weatherrooster.com/api/city_detail/Los_Angeles_CA
+
+    %br
+    %br

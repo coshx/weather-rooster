@@ -36,6 +36,7 @@ WeatherRooster::Application.routes.draw do
   get 'city/:city' => 'home#main'
   get "home/landing"
   get "home/main"
+  get "api" => "home#api"
   get "status"=> "home#status"
   get "about" => "home#about"
   get "contact" => "home#contact"
