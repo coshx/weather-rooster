@@ -9,7 +9,7 @@
       %td=c.name
       -@services.each do |s|
         %td
-          =s.weather_records.where(:city_id => c.id).order(:created_at).last.created_at.strftime("%v %R")
+          =Time.parse("{#s.weather_records.where(:city_id => c.id).order(:created_at).last.created_at}").in_time_zone("Pacific Time (US & Canada)")
           %br
-          =s.current_forecasts.where(:city_id => c.id).order(:updated_at).last.updated_at.strftime("%v %R")
+          =Time.parse("{#s.current_forecasts.where(:city_id => c.id).order(:updated_at).last.updated_at.strftime("%v %R")}").in_time_zone("Pacific Time (US & Canada)")
       
