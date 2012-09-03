@@ -22,9 +22,19 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails', :group => :development
   gem 'rb-readline'
-  gem 'rspec'
   gem 'hipchat'
+
+ gem "cucumber-rails", "~> 1.0", require: false
+  gem "factory_girl_rails"
+  gem "timecop"
+  gem 'shoulda-matchers'
+  gem 'simplecov', :require => false # code coverage tool
+  gem "database_cleaner"
+  gem "forgery"
+  gem "rspec-rails"
+
 end
+
 
 # deployment
 gem 'capistrano'
