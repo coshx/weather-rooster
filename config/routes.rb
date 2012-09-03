@@ -18,11 +18,11 @@ WeatherRooster::Application.routes.draw do
   get "home/landing"
   get "home/main"
   get "status"=> "home#status"
+  get '/' => 'home#status', :constraints => { :subdomain => 'status' }
   get "about" => "home#about"
   get "contact" => "home#contact"
   get "city_details" => "home#city_details"
   get "city/:city/details" => "home#city_details"
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
