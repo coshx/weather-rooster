@@ -12,6 +12,9 @@ class ErrorMailer < ActionMailer::Base
       :to      => 'gabe@coshx.com, mikhail@coshx.com',
       :tag     => 'weatherrooster'
     )
+
+    client = HipChat::Client.new('89d684618c0efae42e66b30900961c')
+    client['Weather Rooster'].send('ERROR', "We got an error, people. #{@error_title}, #{@error_description}, #{@error_time}", :notify => true, :color => 'red')
   
   end
   
