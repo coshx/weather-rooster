@@ -1,31 +1,32 @@
-%table 
-  %tr
-    %td
-    -@services.each do |s|
-      %td=s.short_name
-                 
-  -@cities.each do |c|
+.status 
+  %table
     %tr
-      %td=c.name
+      %td
       -@services.each do |s|
-        %td
-          -refresh_last_date = s.weather_records.where(:city_id => c.id).order(:created_at).last.created_at.in_time_zone("Pacific Time (US & Canada)")
+        %td=s.short_name
+                   
+    -@cities.each do |c|
+      %tr
+        %td=c.name
+        -@services.each do |s|
+          %td
+            -refresh_last_date = s.weather_records.where(:city_id => c.id).order(:created_at).last.created_at.in_time_zone("Pacific Time (US & Canada)")
 
-          -if weather_record_valid?(refresh_last_date)
-            .green_box
-            =refresh_last_date.strftime("%v %R")
-          -else
-            .red_box
-            =refresh_last_date.strftime("%v %R")
-          
-          %br
-          
-          -refresh_last_date=s.current_forecasts.where(:city_id => c.id).order(:updated_at).last.updated_at.in_time_zone("Pacific Time (US & Canada)")
-      
-          -if current_forecast_valid?(refresh_last_date)
-            .green_box
-            =refresh_last_date.strftime("%v %R")
-          -else
-            .red_box
-            =refresh_last_date.strftime("%v %R")
-      
+            -if weather_record_valid?(refresh_last_date)
+              .green_box
+              =refresh_last_date.strftime("%v %R")
+            -else
+              .red_box
+              =refresh_last_date.strftime("%v %R")
+            
+            %br
+            
+            -refresh_last_date=s.current_forecasts.where(:city_id => c.id).order(:updated_at).last.updated_at.in_time_zone("Pacific Time (US & Canada)")
+        
+            -if current_forecast_valid?(refresh_last_date)
+              .green_box
+              =refresh_last_date.strftime("%v %R")
+            -else
+              .red_box
+              =refresh_last_date.strftime("%v %R")
+        
