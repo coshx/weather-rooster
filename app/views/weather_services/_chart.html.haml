@@ -2,17 +2,18 @@
   %h3= weather_service.full_name
 
   - data = weather_service.full_comparison_data(city)
+  - service_id = weather_service.short_name.underscore.gsub(/[^0-9A-Za-z_]/, '')
 
-  = render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_lows], :actual_data => data[:actual_lows], :table_class => "lows_#{weather_service.short_name.underscore}"}
+  = render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_lows], :actual_data => data[:actual_lows], :table_class => "lows_#{service_id}"}
 
-  = render :partial => "weather_services/chart_js", :locals => {:chart_class => "lows_#{weather_service.short_name.underscore}"}
+  = render :partial => "weather_services/chart_js", :locals => {:chart_class => "lows_#{service_id}"}
 
   %p.chart-description
     #{weather_service.short_name}'s predictions for low temperatures against the actual low temperatures.
 
-  = render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_highs], :actual_data => data[:actual_highs], :table_class => "highs_#{weather_service.short_name.underscore}"}
+  = render :partial => "weather_services/chart_table", :locals => {:weather_service => weather_service, :forecast_data => data[:forecast_highs], :actual_data => data[:actual_highs], :table_class => "highs_#{service_id}"}
 
-  = render :partial => "weather_services/chart_js", :locals => {:chart_class => "highs_#{weather_service.short_name.underscore}"}
+  = render :partial => "weather_services/chart_js", :locals => {:chart_class => "highs_#{service_id}"}
 
   %p.chart-description
     #{weather_service.short_name}'s predictions for high temperatures against the actual high temperatures.
