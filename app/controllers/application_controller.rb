@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   def translate_status(api_name)
     status = WeatherStatus.find_by_api_name(api_name)
     
-    if status.blank? or status.name == ""
-      Error.create(:name => 'New weather description', :description => api_name)
+    if status.blank?
+      Error.create(:title => 'New weather description', :description => api_name)
       WeatherStatus.create(:api_name => api_name)
       "partly-cloudy"
     else
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     end
     
   end
-  
+    
   def request_city
     
     if params[:city].present?
