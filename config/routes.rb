@@ -18,7 +18,6 @@ WeatherRooster::Application.routes.draw do
   get "home/landing"
   get "home/main"
   get "status"=> "home#status"
-  get '/' => 'home#status', :constraints => { :subdomain => 'status' }
   get "about" => "home#about"
   get "contact" => "home#contact"
   get "city_details" => "home#city_details"
@@ -73,6 +72,7 @@ WeatherRooster::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+   root :to => 'home#status', :constraints => { :subdomain => 'status' }
    root :to => 'home#main'
 
   # See how all your routes lay out with "rake routes"
