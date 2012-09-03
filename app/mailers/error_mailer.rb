@@ -1,3 +1,5 @@
+require 'hipchat'
+
 class ErrorMailer < ActionMailer::Base
   default :from => "weatherrooster@coshx.com"
   
@@ -9,7 +11,7 @@ class ErrorMailer < ActionMailer::Base
      
      mail(
       :subject => "WeatherRooster: We got a new error, '#{@error_title}'",
-      :to      => 'gabe@coshx.com, mikhail@coshx.com',
+      :to      => 'weather-rooster-monitoring@coshx.com',
       :tag     => 'weatherrooster'
     )
 
