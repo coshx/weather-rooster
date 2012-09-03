@@ -18,5 +18,14 @@ module ApplicationHelper
     #status = Weather_status.find_by_api_name(api_name)
     #return status.name
   end
+  
+  #Time.current
+  def weather_record_valid?(the_time)
+    true if (Time.current - the_time) < 36.hours
+  end
+
+  def current_forecast_valid?(the_time)
+    true if (Time.current - the_time) < 20.minutes
+  end
 
 end
