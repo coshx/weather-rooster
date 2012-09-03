@@ -1,0 +1,13 @@
+%table 
+  %tr
+    %td=c.name
+    -@services.each do |s|
+      %td=s.name
+                
+  -@cities.each do |c|
+    %tr
+      %td=c.name
+      -@services.each do |s|
+        %td
+          1
+      
