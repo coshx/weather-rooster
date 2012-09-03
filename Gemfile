@@ -22,11 +22,6 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails', :group => :development
   gem 'rb-readline'
-
-  # deployment
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'rvm-capistrano'
   gem 'hipchat'
 
  gem "cucumber-rails", "~> 1.0", require: false
@@ -41,6 +36,9 @@ group :development, :test do
 end
 
 
+# deployment
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.
