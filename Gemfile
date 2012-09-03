@@ -11,8 +11,7 @@ gem 'heroku'
 gem 'pg'
 gem 'haml-rails'
 
-gem 'crack'
-gem 'barometer', :github => 'gkop/barometer', :branch => 'master'
+gem 'barometer'
 gem 'gsl'
 
 # cron dsl
@@ -22,7 +21,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'pry-rails', :group => :development
-  gem 'rspec'
+  gem 'rb-readline'
 
   # deployment
   gem 'capistrano'
@@ -30,7 +29,7 @@ group :development, :test do
   gem 'rvm-capistrano'
   gem 'hipchat'
 
-  gem "cucumber-rails", "~> 1.0", require: false
+ gem "cucumber-rails", "~> 1.0", require: false
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
@@ -42,9 +41,6 @@ group :development, :test do
 end
 
 
-# deployment
-gem 'capistrano'
-gem 'rvm-capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -53,7 +49,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   #gem 'therubyracer'
   gem 'execjs'
-
+  
   # Add these gems
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.8'
