@@ -4,6 +4,6 @@
       .city 
         .text
           It's #{Time.current.strftime("%A, %B, %d, at %I:%M %p").gsub(/ 0/, " ")} and
-          %span.black #{@day[0][:string]}
+          %span.black #{@day[0][:api_string]}
           in
         = render 'cities/list_button'

@@ -38,6 +38,8 @@ class HomeController < ApplicationController
       @day[i][:high] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_high"]
       @day[i][:low] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_low"]
       @day[i][:string] = translate_status(@services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_string"])
+      @day[i][:api_string] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_string"]
+
     end
     
     
@@ -67,6 +69,7 @@ class HomeController < ApplicationController
       @day[i][:high] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_high"]
       @day[i][:low] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_low"]
       @day[i][:string] = translate_status(@services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_string"])
+      @day[i][:api_string] = @services.first[:service].current_forecasts.where(:city_id => @my_city.id).first["day_#{i}_string"]
     end
   end
 end
