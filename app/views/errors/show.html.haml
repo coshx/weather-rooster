@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @error.title
+%p
+  %b Description:
+  = @error.description
+
+= link_to 'Edit', edit_error_path(@error)
+\|
+= link_to 'Back', errors_path

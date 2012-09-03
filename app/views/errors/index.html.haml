@@ -1,0 +1,15 @@
+%h1 Listing errors
+
+%table
+  %tr
+    %th Title
+    %th Description
+
+  - @errors.each do |error|
+    %tr
+      %td= error.title
+      %td= error.description
+
+%br
+
+
