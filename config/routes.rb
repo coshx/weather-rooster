@@ -1,6 +1,19 @@
+require 'api_constraints'
+
 WeatherRooster::Application.routes.draw do
 
-  
+  #API
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default:true) do
+      get "providers" => "api#providers"
+      get "cities" => "api#cities"
+      get "weather_records/:date" => "api#weather_records"
+      get "city_detail/:city" => "api#city_detail"
+#      get "weather_records/:date/:provider" => "api#weather_records"
+    end
+  end
+
+
   root :to => 'home#status', :constraints => { :subdomain => 'status' }
   # eg status.weatherrooster.com/about redirects to weatherrooster.com/about
   #   http://stackoverflow.com/a/7352878/283398
