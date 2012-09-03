@@ -12,7 +12,8 @@ gem 'rb-readline'
 gem 'pg'
 gem 'haml-rails'
 
-gem 'barometer'
+gem 'crack'
+gem 'barometer', :github => 'gkop/barometer', :branch => 'master'
 gem 'gsl'
 
 # cron dsl
@@ -23,6 +24,7 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails', :group => :development
   gem 'rb-readline'
+  gem 'rspec'
 
   # deployment
   gem 'capistrano'
@@ -30,7 +32,7 @@ group :development, :test do
   gem 'rvm-capistrano'
   gem 'hipchat'
 
- gem "cucumber-rails", "~> 1.0", require: false
+  gem "cucumber-rails", "~> 1.0", require: false
   gem "factory_girl_rails"
   gem "timecop"
   gem 'shoulda-matchers'
@@ -50,7 +52,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   #gem 'therubyracer'
   gem 'execjs'
-  
+
   # Add these gems
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.8'

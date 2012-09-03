@@ -34,12 +34,12 @@ class WeatherService < ActiveRecord::Base
     end
     p[:current_temp] = weather.current.temperature.to_i
     weather.forecast.slice(0..5).each_with_index do |f, i|
-      p["day_#{i}_high"] = f.high.to_i
+      p["day_#{i}_high"] = f.high.to_i if f.high.to_i > f.low.to_i
       p["day_#{i}_low"] = f.low.to_i
-      if f.icon.present?
-        p["day_#{i}_string"] = f.icon
-      else
+      if f.condition.present?
         p["day_#{i}_string"] = f.condition
+      else
+        p["day_#{i}_string"] = f.icon
       end
     end
     records = CurrentForecast.where(key_params)
@@ -157,8 +157,8 @@ class WeatherService < ActiveRecord::Base
   end
 
   def config_barometer
-    if short_name == "Google"
-      Barometer.config = { 1 => [:google] }
+    if short_name == "WeatherBug"
+      Barometer.config = { 1 => [:weather_bug => {:keys => API_KEYS["weather_bug"]}] }
     elsif short_name == "Wunderground"
       Barometer.config = { 1 => [:wunderground] }
     else
