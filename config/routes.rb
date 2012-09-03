@@ -1,6 +1,6 @@
 WeatherRooster::Application.routes.draw do
 
-
+  
   root :to => 'home#status', :constraints => { :subdomain => 'status' }
   # eg status.weatherrooster.com/about redirects to weatherrooster.com/about
   #   http://stackoverflow.com/a/7352878/283398

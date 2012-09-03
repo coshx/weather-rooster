@@ -8,6 +8,8 @@ gem 'rails', '3.2.8'
 gem 'geocoder'
 gem 'heroku'
 gem 'rb-readline'
+gem 'postmark-rails'
+
 
 gem 'pg'
 gem 'haml-rails'
