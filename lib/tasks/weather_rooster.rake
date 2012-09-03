@@ -4,14 +4,7 @@ namespace :weather_rooster do
     services = WeatherService.where(:active => true)
     cities = City.all
     cities.each do |c|
-      services.each do |s|
-        begin
-          s.pull_latest_forecast(c)
-          Rails.logger.info "Successfully pulled current forecast for #{s.short_name}:#{c.name}"
-        rescue Exception => ex
-          Rails.logger.error "Error pulling current forecast for #{s.short_name}:#{c.name} - #{ex}"
-        end
-      end
+      services.each {|s| s.pull_latest_forecast(c)} rescue nil
       sleep 1
     end
   end
