@@ -10,5 +10,6 @@
       -@services.each do |s|
         %td
           =s.weather_records.order(:created_at).last.created_at.strftime("%v %R")
+          %br
           =s.current_forecasts.order(:created_at).last.created_at.strftime("%v %R")
       
