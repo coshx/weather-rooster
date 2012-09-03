@@ -12,7 +12,11 @@ class ApplicationController < ActionController::Base
       WeatherStatus.create(:api_name => api_name)
       "partly-cloudy"
     else
-      status.name
+      if status.name == ""
+        "partly-cloudy"
+      else
+        status.name
+      end
     end
     
   end

@@ -4,11 +4,13 @@
   %tr
     %th Title
     %th Description
-
+    %th Created at
+    
   - @errors.each do |error|
     %tr
       %td= error.title
       %td= error.description
+      %td= error.created_at.strftime("%v %R")
 
 %br
 
