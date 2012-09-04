@@ -1,7 +1,15 @@
 namespace :weather_rooster do
   desc "Pull the latest forecasts from the weather services"
   task :pull_latest_forecasts => :environment do
-    services = WeatherService.where(:active => true)
+    if ARGV.size > 1
+      flag = ARGV.last
+      task flag.to_sym do ; end
+    end
+    if defined?(flag) && flag == "all"
+      services = WeatherService.all
+    else
+      services = WeatherService.where(:active => true)
+   end
     cities = City.all
     cities.each do |c|
       services.each do |s|

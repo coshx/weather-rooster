@@ -7,7 +7,7 @@ class WeatherService < ActiveRecord::Base
   has_many :current_forecasts
 
   def pull_tomorrows_weather(city)
-    config_barometer
+    return if !config_barometer
     barometer = Barometer.new(city.postal_code)
     weather = barometer.measure
     p = {:low => weather.forecast[1].low.to_i, :high => weather.forecast[1].high.to_i, :recorded_at => Time.current}
@@ -22,7 +22,7 @@ class WeatherService < ActiveRecord::Base
   end
 
   def pull_latest_forecast(city)
-    config_barometer
+    return if !config_barometer
     barometer = Barometer.new(city.postal_code)
     key_params = {:city_id => city.id, :weather_service_id => self.id}
     p = {}
@@ -163,9 +163,12 @@ class WeatherService < ActiveRecord::Base
       Barometer.config = { 1 => [:wunderground] }
     elsif short_name == "Yahoo!"
       Barometer.config = { 1 => [:yahoo] }
+    elsif short_name == "NWS"
+      Barometer.config = { 1 => [:noaa] }
     else
-      return "ERROR, not a recognized service: #{short_name}"
+      return false
     end
+    true
   end
 
   def recent_noaa_data(city)
