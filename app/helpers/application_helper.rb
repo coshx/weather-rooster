@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def noaa_weather_record_valid?(the_time)
-    true if (Time.current - the_time) < 100.hours
+    true if (Time.current - the_time) < 140.hours
   end
 
 
