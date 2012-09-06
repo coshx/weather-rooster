@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gkop/barometer.git
-  revision: d957cb5237bbf02022740f098003cdb9c0c4b640
+  revision: f74afcf7bdf493b06ad8e70e9c479afea6155dc0
   branch: master
   specs:
     barometer (0.7.3)
