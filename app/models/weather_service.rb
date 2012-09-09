@@ -79,6 +79,25 @@ class WeatherService < ActiveRecord::Base
     data
   end
 
+  def recent_data(city, end_date)
+    Time.zone = city.timezone
+    data = {}
+    data[:lows] = []
+    data[:highs] = []
+    our_data = recent_our_data(city).all
+    (end_date - 30.days ..end_date).each do |date|
+      record = our_data.find {|r| r.weather_date == date}
+      if record
+        data[:lows] << {date => record.low}
+        data[:highs] << {date => record.high}
+      else
+        data[:lows] << {date => nil}
+        data[:highs] << {date => nil}
+      end
+    end
+    data
+  end
+
   def delta_comparison_data(city)
     Time.zone = city.timezone
     noaa_data = recent_noaa_data(city)
@@ -173,14 +192,14 @@ class WeatherService < ActiveRecord::Base
 
   def recent_noaa_data(city)
     noaa = WeatherService.find_by_short_name("NOAA")
-    start_date = Time.current.to_date - 30.days
+    start_date = Time.current.to_date - 45.days
     end_date = Time.current.to_date
     @noaa_data ||= {}
     @noaa_data[city.name.to_sym] ||= WeatherRecord.where(:weather_service_id => noaa.id, :city_id => city.id).where(["weather_date >= ?", start_date]).where(["weather_date <= ?", end_date]).order("weather_date asc")
   end
 
   def recent_our_data(city)
-    start_date = Time.current.to_date - 30.days
+    start_date = Time.current.to_date - 45.days
     end_date = Time.current.to_date
     @our_data ||= {}
     @our_data[city.name.to_sym] ||= WeatherRecord.where(:weather_service_id => self.id, :city_id => city.id).where(["weather_date >= ?", start_date]).where(["weather_date <= ?", end_date]).order("weather_date asc")

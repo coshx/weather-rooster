@@ -1,0 +1,16 @@
+%table.graph.graph-table{:class => table_class}
+  %caption= table_class.capitalize
+  %thead
+    %tr
+      %td
+      - data.first[1].each do |r|
+        %th{:scope => "col"}= "#{r.keys[0].month}/#{r.keys[0].day}"
+
+  %tbody
+    - data.each do |s|
+      %tr
+        - name = s[0].short_name
+        - name = "NOAA (Actual)" if name == "NOAA"
+        %th{:scope => "row"} #{name}
+        - s[1].each do |r|
+          %td #{r.values[0]}

@@ -5,13 +5,13 @@ $grey:#999999;
   width:90%;
   border:none;
   background:none;
-  font-size:16px;  
-  
+  font-size:16px;
+
   td {
     border-bottom:1px dotted gray;
     padding: 15px 0px;
-    font-size:16px;  
-  
+    font-size:16px;
+
   }
 
   tr {
@@ -22,7 +22,7 @@ $grey:#999999;
     }
 
   }
-  
+
   border-collapse: collapse;
 	border-spacing: 0;
 
@@ -30,7 +30,7 @@ $grey:#999999;
 }
 
 .graph-table {
-display:none;
+  display:none;
 }
 
 .provider-analytics {

@@ -22,18 +22,20 @@ class HomeController < ApplicationController
   def city_details
     @my_city = closest_city
     @services = WeatherService.where(:active => true)
+
     @services.map! {|s| {:service => s,
                                :score => s.recent_cc_score(@my_city) } }
     @services.sort! {|x,y| y[:score] <=> x[:score] }
 
     the_service =  @services.first[:service].current_forecasts.where(:city_id => @my_city.id)
 
-
+    noaa = WeatherService.find_by_short_name("NOAA")
+    @services << {:service => noaa, :score => 100}
 
     #weather
-     @cities = City.all
+    @cities = City.all
 
-     @current_temp = the_service.first.current_temp
+    @current_temp = the_service.first.current_temp
 
     @provider_name  = the_service.first.weather_service.short_name
 
@@ -51,10 +53,7 @@ class HomeController < ApplicationController
       @day[i][:low] = the_service.first["day_#{i}_low"]
       @day[i][:string] = translate_status(the_service.first["day_#{i}_string"])
       @day[i][:api_string] = the_service.first["day_#{i}_string"]
-
     end
-
-
   end
 
   def landing

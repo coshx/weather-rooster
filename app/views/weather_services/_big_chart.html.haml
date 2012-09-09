@@ -1,0 +1,13 @@
+= render :partial => "weather_services/big_chart_table", :locals => {:data => data[:lows], :table_class => "lows"}
+
+= render :partial => "weather_services/big_chart_js", :locals => {:chart_class => "lows"}
+
+%p.chart-description
+  Predictions for low temperatures against the actual low temperatures.
+
+= render :partial => "weather_services/big_chart_table", :locals => {:data => data[:highs], :table_class => "highs"}
+
+= render :partial => "weather_services/big_chart_js", :locals => {:chart_class => "highs"}
+
+%p.chart-description
+  Predictions for high temperatures against the actual high temperatures.

@@ -1,0 +1,7 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    w = $(".main").width()-100;
+    var settings = { type: "line", width: w, height: 220, title: "<%= chart_class.humanize.titleize %>"};
+    $("table.<%= chart_class %>.graph").visualize(settings);
+  });
+</script>
