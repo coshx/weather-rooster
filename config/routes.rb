@@ -40,8 +40,7 @@ WeatherRooster::Application.routes.draw do
   get "status"=> "home#status"
   get "about" => "home#about"
   get "contact" => "home#contact"
-  get "city_details" => "home#city_details"
-  get "city/:city/details" => "home#city_details"
+  get "city/:city" => "home#city_details", :as => 'city_details'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
