@@ -22,14 +22,14 @@ class ApplicationController < ActionController::Base
   end
 
   def request_city
-
     if params[:city].present?
       city = Geocoder.search(params[:city])[0]
-      cookies[:city] = params[:city]
+      cookies[:city] = city
     else
 
       if cookies[:city].present?
-        city = Geocoder.search(cookies[:city])[0]
+        city = cookies[:city]
+        #Geocoder.search(cookies[:city])[0]
       else
         city = request.location
       end
