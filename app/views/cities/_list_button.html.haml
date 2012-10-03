@@ -2,5 +2,6 @@
   #{closest_city.name}
   %ul
     -@cities.each do |c|
-      %li=link_to c.name, city_details_path(:city => slug(c.name))
+      -the_path =  controller.action_name == "city_details" ? city_details_path(:city => slug(c.name)) : city_path(:city => slug(c.name))
+      %li=link_to c.name, the_path
       %li.divider
