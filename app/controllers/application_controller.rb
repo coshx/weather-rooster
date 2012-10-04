@@ -22,19 +22,26 @@ class ApplicationController < ActionController::Base
   end
 
   def request_city
+    city = ""
+
     if params[:city].present?
+      puts ":city present"
       city = Geocoder.search(params[:city])[0]
       city = Geocoder.search("San Francisco")[0] if city.city.blank?
       cookies[:city] = city
     else
 
       if cookies[:city].present?
+        puts ":cookie present"
         city = cookies[:city]
       else
+        puts "detecting loc"
         city = request.location
       end
 
     end
+
+    puts "Class: " g+ city.class
 
     if city.respond_to(:city)
       city = Geocoder.search("San Francisco")[0]
