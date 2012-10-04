@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
 
     end
 
-    if city.city.blank?
+    if city.respond_to(:city)
       city = Geocoder.search("San Francisco")[0]
       cookies[:city] = city
     end
