@@ -25,23 +25,23 @@ class ApplicationController < ActionController::Base
     city = ""
 
     if params[:city].present?
-      puts ":city present"
+      logger.info ":city present"
       city = Geocoder.search(params[:city])[0]
       city = Geocoder.search("San Francisco")[0] if city.city.blank?
       cookies[:city] = city
     else
 
       if cookies[:city].present?
-        puts ":cookie present"
+        logger.info ":cookie present"
         city = cookies[:city]
       else
-        puts "detecting loc"
+        logger.info "detecting loc"
         city = request.location
       end
 
     end
 
-    puts "Class: " + city.class.to_s
+    logger.info "Class: " + city.class.to_s
 
     if city.respond_to(:city)
       city = Geocoder.search("San Francisco")[0]
