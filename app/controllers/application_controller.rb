@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
 
     end
 
-    puts "Class: " g+ city.class
+    puts "Class: " + city.class
 
     if city.respond_to(:city)
       city = Geocoder.search("San Francisco")[0]
