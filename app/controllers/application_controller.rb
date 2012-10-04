@@ -39,14 +39,15 @@ class ApplicationController < ActionController::Base
         city = request.location
       end
 
+      logger.info "Class: " + city.class.to_s
+
+      if city.respond_to(:city)
+        city = Geocoder.search("San Francisco")[0]
+        cookies[:city] = city
+      end
+
     end
 
-    logger.info "Class: " + city.class.to_s
-
-    if city.respond_to(:city)
-      city = Geocoder.search("San Francisco")[0]
-      cookies[:city] = city
-    end
 
     city
 
