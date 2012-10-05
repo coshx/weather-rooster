@@ -22,32 +22,15 @@ class ApplicationController < ActionController::Base
   end
 
   def request_city
-    city = ""
 
     if params[:city].present?
-      logger.info ":city present"
       city = Geocoder.search(params[:city])[0]
       city = Geocoder.search("San Francisco")[0] if city.city.blank?
-      cookies[:city] = city
     else
-
-      if cookies[:city].present?
-        logger.info ":cookie present"
-        city = cookies[:city]
-      else
-        logger.info "detecting loc"
         city = request.location
-      end
-
-      logger.info "Class: " + city.class.to_s
-
-      if city.respond_to(:city)
-        city = Geocoder.search("San Francisco")[0]
-        cookies[:city] = city
-      end
-
     end
 
+      logger.info "Class: " + city.class.to_s
 
     city
 
@@ -60,8 +43,15 @@ class ApplicationController < ActionController::Base
 
   def find_closest_city
     cities = City.all
-
-      city = request_city
+      if params[:city].present?
+        city = request_city
+      else
+        if cookies[:the_city].present?
+          city = City.find_by_id(cookies[:the_city])
+        else
+          city = request_city
+        end
+      end
       la1 = city.latitude
       lo1 = city.longitude
 
@@ -82,6 +72,7 @@ class ApplicationController < ActionController::Base
     end
 
   city
+  cookies[:the_city] = city.id
 
   end
 
