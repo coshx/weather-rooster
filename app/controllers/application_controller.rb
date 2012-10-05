@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
       city = Geocoder.search(params[:city])[0]
       city = Geocoder.search("San Francisco")[0] if city.city.blank?
     else
-        city = request.location
+      city = request.location
     end
 
       logger.info "Class: " + city.class.to_s
@@ -38,22 +38,20 @@ class ApplicationController < ActionController::Base
 
   def closest_city
     # if there's sity in the sesion, use it, otherwise find it through find_closest_city
-    find_closest_city
+    if cookies[:the_city].present? and params[:city].blank?
+      City.find_by_id(cookies[:the_city])
+    else
+      find_closest_city
+    end
+
   end
 
   def find_closest_city
     cities = City.all
-      if params[:city].present?
-        city = request_city
-      else
-        if cookies[:the_city].present?
-          city = City.find_by_id(cookies[:the_city])
-        else
-          city = request_city
-        end
-      end
-      la1 = city.latitude
-      lo1 = city.longitude
+
+    city = request_city
+    la1 = city.latitude
+    lo1 = city.longitude
 
     smaller_distance = 1000000000.00000001
     city = cities.first
@@ -71,8 +69,8 @@ class ApplicationController < ActionController::Base
 
     end
 
-  city
   cookies[:the_city] = city.id
+  city
 
   end
 
