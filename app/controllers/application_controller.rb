@@ -30,6 +30,7 @@ class ApplicationController < ActionController::Base
       city = request.location
     end
 
+
       logger.info "Class: " + city.class.to_s
 
     city
@@ -41,15 +42,19 @@ class ApplicationController < ActionController::Base
     if cookies[:the_city].present? and params[:city].blank?
       City.find_by_id(cookies[:the_city])
     else
-      find_closest_city
+      city = request_city
+      if city.respond_to?(:latitude)
+        find_closest_city(city)
+      else
+        City.all.sample()
+      end
     end
 
   end
 
-  def find_closest_city
+  def find_closest_city(city)
     cities = City.all
 
-    city = request_city
     la1 = city.latitude
     lo1 = city.longitude
 
