@@ -25,8 +25,13 @@ class ApplicationController < ActionController::Base
 
     if params[:city].present?
       city = Geocoder.search(params[:city])[0]
-      city = Geocoder.search("San Francisco")[0] if city.city.blank?
-    else
+      if city.present?
+        city = Geocoder.search("San Francisco")[0] if city.city.blank?
+      else
+        city = Geocoder.search("San Francisco")[0]
+      end
+
+      else
       city = request.location
     end
 
