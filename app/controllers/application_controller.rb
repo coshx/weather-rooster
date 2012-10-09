@@ -45,15 +45,22 @@ class ApplicationController < ActionController::Base
   def closest_city
     # if there's sity in the sesion, use it, otherwise find it through find_closest_city
     if cookies[:the_city].present? and params[:city].blank?
-      City.find_by_id(cookies[:the_city])
+      city = City.find_by_id(cookies[:the_city])
     else
-      city = request_city
-      if city.respond_to?(:latitude)
-        find_closest_city(city)
-      else
-        City.all.sample()
+      if params[:city].present?
+        city = City.find_by_slug(params[:city])
+      end
+      if city.blank?
+        city = request_city
+        if city.respond_to?(:latitude)
+          city = find_closest_city(city)
+        else
+          city = City.all.sample()
+        end
       end
     end
+
+    city
 
   end
 
