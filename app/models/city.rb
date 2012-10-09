@@ -24,7 +24,6 @@ class City < ActiveRecord::Base
       end
     end
 
-  #puts "that's what we got, fuck!" + city.name if city.present?
     the_city
 
   end
