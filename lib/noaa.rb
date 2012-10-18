@@ -13,6 +13,8 @@ class NOAA
       max = self.get "/GHCND:#{station_id}/datatypes/TMAX/data", :query => options
       max_f = self.c_to_f(max["dataCollection"]["data"]["value"]/10.0)
       sleep 1 # throttled :(
+      date += 1 # lows are from tomorrow's data
+      options = {:year => date.year, :startday => date.day, :endday => date.day, :month => date.month, :token => @@token}
       min = self.get "/GHCND:#{station_id}/datatypes/TMIN/data", :query => options
       min_f = self.c_to_f(min["dataCollection"]["data"]["value"]/10.0)
       # recorded at is really fetched at
@@ -40,7 +42,7 @@ class NOAA
       if records.any?
         start_date = records.last.weather_date + 1.day
       else
-        start_date = Time.current.to_date - 30.days # only look back 30 days
+        start_date = Time.current.to_date - 45.days # only look back 45 days
       end
       end_date = self.get_date_of_most_recent_data(city.station_id)
       sleep 1
@@ -62,7 +64,8 @@ class NOAA
       today = Time.current.to_date
       start_date = today - years_back.years - 30.days # only look back 30 days
       end_date = today - years_back.years # only look back 30 days
-      while start_date <= end_date
+      # Need the next day's weather to get the lows, so stop before end date
+      while start_date < end_date
         weather = self.get_weather_for_date(city.station_id, start_date)
         if weather.present?
           weather[:weather_date] = weather[:weather_date] + years_back.years
