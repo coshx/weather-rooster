@@ -49,6 +49,7 @@ class ApplicationController < ActionController::Base
     else
       if params[:city].present?
         city = City.find_by_slug(params[:city])
+        cookies[:the_city] = city.id if city.present?
       end
       if city.blank?
         city = request_city
